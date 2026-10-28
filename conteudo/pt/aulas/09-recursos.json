@@ -5,7 +5,7 @@
   "titulo": "Guia dos recursos: o que é cada um, e um exemplo",
   "titulo_curto": "Guia dos recursos",
   "minutos": 15,
-  "lead": "Esta é a aula de consulta. Aqui estão todos os recursos do curso num lugar só, em cinco grupos: rodar em paralelo, coordenar, nuvem, entregar e controlar. Cada um tem o que é em uma frase, o status (pronto, prévia, beta ou experimental), quando usar e um exemplo na agência da Ana. Volte aqui sempre que esquecer um comando.",
+  "lead": "Esta é a aula de consulta. Aqui estão os principais recursos do curso num lugar só, em cinco grupos: rodar em paralelo, coordenar, nuvem, entregar e controlar. Cada um tem o que é em uma frase, o status (oficial, prévia, beta ou experimental), quando usar e um exemplo na agência da Ana. Volte aqui sempre que esquecer um comando.",
   "objetivo": "achar o recurso certo para cada situação e usar o exemplo dele como ponto de partida no seu trabalho.",
   "competencias": [
     "escolher-recurso-certo",
@@ -23,7 +23,7 @@
     },
     {
       "icone": "check",
-      "t": "O status de cada um: pronto, beta ou experimental"
+      "t": "O status de cada um: oficial, prévia, beta ou experimental"
     },
     {
       "icone": "caneta",
@@ -135,7 +135,7 @@
     {
       "tipo": "passos",
       "titulo": "Rodar em paralelo (terminal)",
-      "sub": "Recursos do Claude Code no terminal. Os que começam com claude você digita no terminal; os que começam com / você digita dentro da sessão. Prévia (research preview) = já funciona, mas ainda pode mudar.",
+      "sub": "Recursos do Claude Code no terminal. Os que começam com claude você digita no terminal; os que começam com / você digita dentro da sessão. Prévia (research preview) = já funciona, mas ainda pode mudar. A tecla ←: numa sessão normal, com o prompt vazio, manda a sessão para trás; dentro da agent view, volta para a lista.",
       "passos": [
         {
           "titulo": "claude --bg",
@@ -153,7 +153,7 @@
           "titulo": "claude agents",
           "sub": "a tela de todas · prévia",
           "texto": [
-            "O que é: a agent view, uma tela com todas as sessões em segundo plano, em grupos. Needs input = precisa de você. Working = trabalhando. Ready for review = tem um PR (pedido de mudança no código) esperando revisão. Completed = terminadas.",
+            "O que é: a agent view, uma tela com todas as sessões em segundo plano, em grupos. Needs input = precisa de você. Working = trabalhando. Ready for review = tem um PR (pedido de mudança no código) esperando revisão. Completed = terminadas, com falha ou paradas. Pinned = as que você fixou (Ctrl+T).",
             "Quando usar: para ver de uma vez quem precisa de você. Enter entra numa sessão; ← no prompt vazio volta para a lista. Na caixa de busca, s:blocked mostra só quem espera por você."
           ],
           "exemplo": {
@@ -187,7 +187,7 @@
         },
         {
           "titulo": "/color",
-          "sub": "uma cor por sessão · pronto",
+          "sub": "uma cor por sessão · oficial",
           "texto": [
             "O que é: dá uma cor à sessão. A cor aparece na agent view.",
             "Quando usar: quando você tem várias sessões e quer reconhecer cada uma de relance."
@@ -206,7 +206,7 @@
       "passos": [
         {
           "titulo": "Conversa entre sessões",
-          "sub": "app Desktop · pronto",
+          "sub": "app Desktop · oficial",
           "texto": [
             "O que é: no app Desktop, aba Code, uma sessão lista as outras sessões dessa aba, lê o que cada uma fez e manda recado entre elas. Você pede em linguagem simples.",
             "Quando usar: para saber quem fez o quê e passar um aviso sem abrir cada sessão. Limite: ela vê só as sessões do próprio Desktop (não as da nuvem nem as do terminal), por padrão as 20 mais recentes."
@@ -218,7 +218,7 @@
         },
         {
           "titulo": "Várias sessões lado a lado",
-          "sub": "app Desktop · pronto",
+          "sub": "app Desktop · oficial",
           "texto": [
             "O que é: no app Desktop, Ctrl+N (Cmd+N no Mac) abre uma sessão nova e Ctrl+Tab troca entre elas. Alt+clique (Option no Mac) numa sessão da barra abre as duas lado a lado.",
             "Quando usar: para acompanhar duas sessões ao mesmo tempo sem trocar de aba."
@@ -230,7 +230,7 @@
         },
         {
           "titulo": "Agent teams",
-          "sub": "terminal · experimental",
+          "sub": "experimental",
           "texto": [
             "O que é: uma sessão vira a líder (lead) e cria colegas (teammates). Cada colega trabalha no próprio contexto, eles conversam entre si e dividem uma lista de tarefas.",
             "Como ligar: vem desligado. No Mac ou Linux, digite no terminal, antes de abrir o claude: export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1. No Windows (PowerShell): $env:CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1. Para ficar ligado sempre, use o settings.json (está na cola de comandos).",
@@ -243,7 +243,7 @@
         },
         {
           "titulo": "/btw",
-          "sub": "pergunta de lado · pronto",
+          "sub": "pergunta de lado · oficial",
           "texto": [
             "O que é: uma pergunta rápida que não interrompe a sessão nem entra no histórico. Ela responde só com o que a sessão já sabe, sem usar ferramentas. No Desktop, o mesmo é o side chat (Ctrl+; ou Cmd+; no Mac).",
             "Quando usar: para tirar uma dúvida no meio de uma tarefa longa sem atrapalhar."
@@ -317,7 +317,7 @@
       "passos": [
         {
           "titulo": "Documento, slides e design",
-          "sub": "página pronta · pronto",
+          "sub": "página pronta · oficial",
           "texto": [
             "O que é: o Claude monta um documento, uma apresentação ou um design a partir da conversa, com visual pronto.",
             "Quando usar: quando o resultado vai para alguém ler, e não só para você."
@@ -341,7 +341,7 @@
         },
         {
           "titulo": "IA dentro e compartilhar",
-          "sub": "botão Share · pronto",
+          "sub": "botão Share · oficial",
           "texto": [
             "O que é: o artifact pode ter IA embutida: a pessoa pergunta em linguagem simples dentro da página. Para mostrar a alguém, use o botão Share. Quem abre precisa entrar com uma conta Claude.",
             "Atenção: nos planos Pro e Max dá para liberar para qualquer pessoa com o link, menos quando o artifact usa o Claude (IA embutida) ou conecta seus apps. Nesse caso, convide a pessoa por e-mail."
@@ -360,7 +360,7 @@
       "passos": [
         {
           "titulo": "/usage e /context",
-          "sub": "medir · pronto",
+          "sub": "medir · oficial",
           "texto": [
             "O que é: /usage mostra o custo da sessão e quanto do limite do plano você já usou. Nos planos Pro e Max, o limite vale por janelas de tempo: uma de 5 horas e uma semanal. /context mostra uma grade colorida do que ocupa o contexto. No app Desktop, o anel ao lado do seletor de modelo mostra o uso.",
             "Quando usar: antes de abrir mais sessões, e sempre que o limite parecer acabar rápido."
@@ -372,19 +372,19 @@
         },
         {
           "titulo": "/skill-doctor",
-          "sub": "enxugar · pronto",
+          "sub": "enxugar · oficial",
           "texto": [
             "O que é: mostra quais skills carregadas você não usa, quanto contexto elas custam e onde desligar cada uma. Skill é uma pasta com instruções que o Claude pode usar; a lista de todas entra em cada mensagem.",
             "Quando usar: quando o /context mostra muita coisa carregada sem uso."
           ],
           "exemplo": {
             "rot": "Exemplo na agência da Ana",
-            "texto": "Na sessão da padaria, /skill-doctor mostra duas skills que Ana testou uma vez e nunca mais usou. Eram skills pessoais: ela move as duas pastas para fora de ~/.claude/skills. Skill que veio num plugin se desliga pelo /plugin."
+            "texto": "Na sessão da padaria, /skill-doctor mostra duas skills que Ana testou uma vez e nunca mais usou. Eram skills pessoais: ela move as duas pastas para fora de ~/.claude/skills (o ~ é a sua pasta pessoal; no Windows, C:\\Users\\[você]\\.claude\\skills). A aula 7 mostra o passo a passo."
           }
         },
         {
           "titulo": "/doctor",
-          "sub": "diagnosticar · pronto",
+          "sub": "diagnosticar · oficial",
           "texto": [
             "O que é: diagnóstico da instalação e da configuração. Dentro da sessão, /doctor propõe correções e espera você confirmar. No terminal, claude doctor só lê e mostra.",
             "Quando usar: quando algo não funciona como antes."
@@ -396,7 +396,7 @@
         },
         {
           "titulo": "/advisor",
-          "sub": "reforço nas decisões · pronto",
+          "sub": "reforço nas decisões · oficial",
           "texto": [
             "O que é: liga um modelo mais forte que o Claude consulta nos momentos-chave. Os nomes, do mais forte para o mais leve: Fable, Opus, Sonnet. Digite /advisor fable, /advisor opus ou /advisor sonnet; /advisor off desliga.",
             "Atenção: consultar outro modelo gasta mais. Use só onde a decisão vale."
@@ -408,7 +408,7 @@
         },
         {
           "titulo": "/recap",
-          "sub": "retomar · pronto",
+          "sub": "retomar · oficial",
           "texto": [
             "O que é: um resumo de uma linha do que a sessão fez, na hora.",
             "Quando usar: ao voltar para uma sessão depois de um tempo fora."
@@ -420,7 +420,7 @@
         },
         {
           "titulo": "/statusline",
-          "sub": "deixar à vista · pronto",
+          "sub": "deixar à vista · oficial",
           "texto": [
             "O que é: a status line é a barra no rodapé do Claude Code. Com /statusline seguido do que você quer ver, o Claude monta essa barra sozinho.",
             "Quando usar: para ver o tempo todo o uso do contexto e do limite do plano, sem digitar comando."
@@ -432,14 +432,14 @@
         },
         {
           "titulo": "Mods",
-          "sub": "mudar a interface · pronto, sem proteção",
+          "sub": "mudar a interface · oficial, sem sandbox",
           "texto": [
             "O que é: plugin é um pacote de extensões do Claude Code. Mod é um plugin que muda como o Claude Code aparece e se comporta: uma faixa, um painel, um aviso, um comando novo. Mods não têm proteção (sandbox): rodam com o mesmo acesso que você.",
             "Antes de instalar: claude plugin validate ./pasta-do-mod lista o que ele faz sozinho (hooks) e o que ele pede. Para começar sem nenhuma customização: claude --safe-mode."
           ],
           "exemplo": {
             "rot": "Exemplo na agência da Ana",
-            "texto": "Ana escolhe um mod no repositório inema-mods (link no fim da aula), baixa a pasta dele e roda claude plugin validate nessa pasta antes de instalar."
+            "texto": "Ana abre o repositório inema-mods (link no fim da aula), clica em Code › Download ZIP, descompacta e roda claude plugin validate na pasta do mod escolhido. Só instala se a lista do que ele faz sozinho fizer sentido."
           }
         }
       ]
@@ -500,14 +500,14 @@
           "id": "e1",
           "titulo": "E1 · O que existe no seu Claude",
           "min": "5 min",
-          "texto": "No terminal, rode claude --version e anote a versão. Abra a barra lateral do claude.ai/code ou a aba Code do app Desktop e veja se aparece Projects. Os recursos em prévia e beta mudam e chegam aos poucos. Se Projects pedir para entrar na lista de espera, anote isso: é a resposta.",
+          "texto": "Abra o terminal (no Windows, o PowerShell pelo menu Iniciar; no Mac, o app Terminal), rode claude --version e anote a versão. Abra a barra lateral do claude.ai/code ou a aba Code do app Desktop e veja se aparece Projects. Os recursos em prévia e beta mudam e chegam aos poucos. Se Projects pedir para entrar na lista de espera, anote isso: é a resposta.",
           "pronto": "você anotou a versão do Claude Code e se tem ou não Projects."
         },
         {
           "id": "e2",
           "titulo": "E2 · Três grupos, três testes",
           "min": "15 min",
-          "texto": "Escolha um recurso de três grupos diferentes do mapa (por exemplo: claude --bg, a conversa entre sessões e /usage). Use o exemplo da Ana como modelo e troque pelo seu trabalho.",
+          "texto": "Escolha um recurso de três grupos diferentes do mapa (por exemplo: claude --bg, a conversa entre sessões e /usage). Use o exemplo da Ana como modelo e troque pelo seu trabalho. Sem terminal? Use só o app Desktop: a conversa entre sessões, o anel de uso e um artifact.",
           "pronto": "você escreveu, para cada um dos três, o comando ou pedido que usou e o que apareceu na tela."
         }
       ]
@@ -538,7 +538,7 @@
             "Agent teams, porque o time trabalha sozinho."
           ],
           "certa": 2,
-          "explica": "Só a thread na nuvem segue com o computador desligado. Sessão em segundo plano, conversa entre sessões do Desktop e agent teams rodam na máquina da Ana, que precisa estar ligada.",
+          "explica": "Só a thread na nuvem segue com o computador desligado. Sessão em segundo plano, conversa entre sessões do Desktop e agent teams dependem de um computador ligado.",
           "ref": "s4"
         },
         {
@@ -577,7 +577,7 @@
         },
         {
           "t": "Status importa",
-          "texto": "Agent view é prévia, Projects é beta, agent teams é experimental, os comandos de controle estão prontos. Confira no seu Claude antes de contar com um recurso."
+          "texto": "Agent view é prévia, Projects é beta, agent teams é experimental, os comandos de controle são oficiais. Confira no seu Claude antes de contar com um recurso."
         },
         {
           "t": "Comece pelo exemplo",
