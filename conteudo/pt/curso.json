@@ -16,7 +16,72 @@
     "href": "https://inematds.github.io/claude-gestor-de-agentes-v72/aulas/sessao-gestora/"
   },
   "rodape": "INEMA.CLUB · conteúdo aberto e gratuito · formato INEMA Learning v7.2 · <a href=\"https://inema.club/\">inema.club</a> · <a href=\"https://www.inema.club/aprender-inteligencia-artificial/\">Guia: como aprender inteligência artificial</a> · <a href=\"https://www.inema.club/cursos/388-claude-como-gestor-de-agentes-saia-do-chat-e-coordene-uma-equipe-de-agentes/\">Ficha completa deste curso no INEMA.CLUB</a>",
-  "videos": {},
+  "videos": {
+    "cga-a1": {
+      "titulo": "A aula 1 em vídeo",
+      "duracao": "2 min 31 s",
+      "mp4": "https://github.com/inematds/claude-gestor-de-agentes-v72/releases/download/video-v1.0.0/cga-a1.mp4",
+      "vtt": "assets/vtt/cga-a1.vtt",
+      "poster": "assets/img/videos/cga-a1.jpg",
+      "pagina": "https://www.youtube.com/watch?v=UT1f-ovQgvw"
+    },
+    "cga-a2": {
+      "titulo": "A aula 2 em vídeo",
+      "duracao": "2 min 5 s",
+      "mp4": "https://github.com/inematds/claude-gestor-de-agentes-v72/releases/download/video-v1.0.0/cga-a2.mp4",
+      "vtt": "assets/vtt/cga-a2.vtt",
+      "poster": "assets/img/videos/cga-a2.jpg",
+      "pagina": "https://www.youtube.com/watch?v=dJOphem9mJc"
+    },
+    "cga-a3": {
+      "titulo": "A aula 3 em vídeo",
+      "duracao": "2 min 22 s",
+      "mp4": "https://github.com/inematds/claude-gestor-de-agentes-v72/releases/download/video-v1.0.0/cga-a3.mp4",
+      "vtt": "assets/vtt/cga-a3.vtt",
+      "poster": "assets/img/videos/cga-a3.jpg",
+      "pagina": "https://www.youtube.com/watch?v=aXQKpJHZrAE"
+    },
+    "cga-a4": {
+      "titulo": "A aula 4 em vídeo",
+      "duracao": "2 min 15 s",
+      "mp4": "https://github.com/inematds/claude-gestor-de-agentes-v72/releases/download/video-v1.0.0/cga-a4.mp4",
+      "vtt": "assets/vtt/cga-a4.vtt",
+      "poster": "assets/img/videos/cga-a4.jpg",
+      "pagina": "https://www.youtube.com/watch?v=Ua1hFymdlUY"
+    },
+    "cga-a5": {
+      "titulo": "A aula 5 em vídeo",
+      "duracao": "2 min 16 s",
+      "mp4": "https://github.com/inematds/claude-gestor-de-agentes-v72/releases/download/video-v1.0.0/cga-a5.mp4",
+      "vtt": "assets/vtt/cga-a5.vtt",
+      "poster": "assets/img/videos/cga-a5.jpg",
+      "pagina": "https://www.youtube.com/watch?v=GedBpOSeuTE"
+    },
+    "cga-a6": {
+      "titulo": "A aula 6 em vídeo",
+      "duracao": "2 min 12 s",
+      "mp4": "https://github.com/inematds/claude-gestor-de-agentes-v72/releases/download/video-v1.0.0/cga-a6.mp4",
+      "vtt": "assets/vtt/cga-a6.vtt",
+      "poster": "assets/img/videos/cga-a6.jpg",
+      "pagina": "https://www.youtube.com/watch?v=-z_rWXNxDIc"
+    },
+    "cga-a7": {
+      "titulo": "A aula 7 em vídeo",
+      "duracao": "2 min 8 s",
+      "mp4": "https://github.com/inematds/claude-gestor-de-agentes-v72/releases/download/video-v1.0.0/cga-a7.mp4",
+      "vtt": "assets/vtt/cga-a7.vtt",
+      "poster": "assets/img/videos/cga-a7.jpg",
+      "pagina": "https://www.youtube.com/watch?v=NfN1MEwX8xA"
+    },
+    "cga-a8": {
+      "titulo": "A aula 8 em vídeo",
+      "duracao": "2 min 26 s",
+      "mp4": "https://github.com/inematds/claude-gestor-de-agentes-v72/releases/download/video-v1.0.0/cga-a8.mp4",
+      "vtt": "assets/vtt/cga-a8.vtt",
+      "poster": "assets/img/videos/cga-a8.jpg",
+      "pagina": "https://www.youtube.com/watch?v=1GgaOtyu2zw"
+    }
+  },
   "inicio": {
     "kicker": "Curso · 8 aulas · sessões, nuvem, artifacts e custo",
     "titulo": "Saia do chat: coordene uma equipe de agentes no Claude",

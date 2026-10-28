@@ -1,0 +1,389 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.160
+Você deixa de usar uma IA e
+
+2
+00:00:02.160 --> 00:00:04.280
+passa a administrar uma força de trabalho
+
+3
+00:00:04.280 --> 00:00:05.800
+digital: você decide,
+
+4
+00:00:05.800 --> 00:00:07.180
+as sessões executam.
+
+5
+00:00:07.180 --> 00:00:08.380
+Mas abrir sessões,
+
+6
+00:00:08.380 --> 00:00:10.400
+mandar para o segundo plano e controlar
+
+7
+00:00:10.400 --> 00:00:11.960
+o custo não basta.
+
+8
+00:00:11.960 --> 00:00:13.440
+Sem um jeito de trabalhar que se
+
+9
+00:00:13.440 --> 00:00:14.400
+repete todo dia,
+
+10
+00:00:14.400 --> 00:00:15.900
+cada sessão vira um susto.
+
+11
+00:00:15.900 --> 00:00:17.500
+Eu te mostro o ciclo antes do
+
+12
+00:00:17.500 --> 00:00:19.380
+pronto, a rotina de um dia e,
+
+13
+00:00:19.380 --> 00:00:21.440
+com honestidade, o que ainda falta.
+
+14
+00:00:21.440 --> 00:00:22.300
+Na minha visão,
+
+15
+00:00:22.300 --> 00:00:24.940
+o trabalho com IA subiu três degraus.
+
+16
+00:00:24.940 --> 00:00:26.220
+Primeiro, o prompt:
+
+17
+00:00:26.220 --> 00:00:27.960
+uma pessoa e uma IA.
+
+18
+00:00:27.960 --> 00:00:29.100
+Depois,
+
+19
+00:00:29.100 --> 00:00:32.020
+o agente: a IA executando uma tarefa
+
+20
+00:00:32.020 --> 00:00:32.600
+inteira.
+
+21
+00:00:32.600 --> 00:00:34.180
+Agora, a gestão de agentes:
+
+22
+00:00:34.180 --> 00:00:36.220
+uma pessoa coordenando várias sessões.
+
+23
+00:00:36.220 --> 00:00:37.980
+O próximo passo é o humano nas
+
+24
+00:00:37.980 --> 00:00:40.720
+decisões e a IA executando
+
+25
+00:00:40.720 --> 00:00:41.380
+em equipe.
+
+26
+00:00:41.380 --> 00:00:43.040
+O coração do sistema é um ciclo
+
+27
+00:00:43.040 --> 00:00:44.300
+que vem antes do pronto.
+
+28
+00:00:44.300 --> 00:00:46.340
+Observar: olhe o que cada sessão fez
+
+29
+00:00:46.340 --> 00:00:47.520
+antes de opinar.
+
+30
+00:00:47.520 --> 00:00:49.700
+Criticar: compare a entrega com a sua
+
+31
+00:00:49.700 --> 00:00:50.440
+regra de pronto,
+
+32
+00:00:50.440 --> 00:00:51.780
+não com a sua impressão.
+
+33
+00:00:51.780 --> 00:00:53.600
+Otimizar: corrija a causa,
+
+34
+00:00:53.600 --> 00:00:55.000
+uma mudança de cada vez.
+
+35
+00:00:55.000 --> 00:00:57.420
+Validar: rode de novo e confira pela
+
+36
+00:00:57.420 --> 00:00:57.990
+regra.
+
+37
+00:00:57.990 --> 00:00:58.740
+Não passou?
+
+38
+00:00:58.740 --> 00:00:59.800
+Volta a observar.
+
+39
+00:00:59.800 --> 00:01:00.940
+Esse é o Loop-R,
+
+40
+00:01:00.940 --> 00:01:02.220
+o método INEMA.
+
+41
+00:01:02.220 --> 00:01:03.740
+A regra de pronto tem de dar
+
+42
+00:01:03.740 --> 00:01:04.460
+para conferir.
+
+43
+00:01:04.460 --> 00:01:06.140
+Cada post cita preço e horário,
+
+44
+00:01:06.140 --> 00:01:07.580
+e o cliente aprova sem correção:
+
+45
+00:01:07.580 --> 00:01:08.900
+dá para olhar e dizer sim ou
+
+46
+00:01:08.900 --> 00:01:09.260
+não.
+
+47
+00:01:09.260 --> 00:01:11.180
+Ficar bom e profissional não tem teste.
+
+48
+00:01:11.180 --> 00:01:12.800
+E a sessão dizer que acabou não
+
+49
+00:01:12.800 --> 00:01:13.520
+é conferência.
+
+50
+00:01:13.520 --> 00:01:14.880
+Agora a rotina da Ana,
+
+51
+00:01:14.880 --> 00:01:16.360
+que tem uma agência com três clientes.
+
+52
+00:01:16.360 --> 00:01:18.080
+De manhã, ela abre a agent view
+
+53
+00:01:18.080 --> 00:01:20.120
+com claude agents e digita s dois
+
+54
+00:01:20.120 --> 00:01:22.020
+pontos blocked na caixa de filtro.
+
+55
+00:01:22.020 --> 00:01:23.460
+Aparece só o que espera por ela:
+
+56
+00:01:23.460 --> 00:01:25.100
+a sessão da clínica pediu uma decisão
+
+57
+00:01:25.100 --> 00:01:26.380
+sobre o texto da página.
+
+58
+00:01:26.380 --> 00:01:27.980
+Ela decide primeiro o que trava.
+
+59
+00:01:27.980 --> 00:01:29.640
+O que está andando fica andando.
+
+60
+00:01:29.640 --> 00:01:30.420
+Durante o dia,
+
+61
+00:01:30.420 --> 00:01:32.180
+dúvida rápida vai no btw:
+
+62
+00:01:32.180 --> 00:01:34.340
+a pergunta lateral não interrompe a sessão
+
+63
+00:01:34.340 --> 00:01:35.480
+nem entra no histórico.
+
+64
+00:01:35.480 --> 00:01:37.140
+Quando uma sessão precisa dela,
+
+65
+00:01:37.140 --> 00:01:38.140
+o terminal avisa.
+
+66
+00:01:38.140 --> 00:01:39.020
+No fim do dia,
+
+67
+00:01:39.020 --> 00:01:40.920
+recap em cada sessão e o ciclo
+
+68
+00:01:40.920 --> 00:01:41.720
+nas entregas.
+
+69
+00:01:41.720 --> 00:01:43.400
+O que passou na regra vira uma
+
+70
+00:01:43.400 --> 00:01:44.440
+linha de registro:
+
+71
+00:01:44.440 --> 00:01:46.640
+data, cliente, entrega,
+
+72
+00:01:46.640 --> 00:01:48.420
+se passou e o que mudou.
+
+73
+00:01:48.420 --> 00:01:50.360
+E aqui vai a parte honesta.
+
+74
+00:01:50.360 --> 00:01:52.100
+Gerenciar sessões não é ter uma plataforma
+
+75
+00:01:52.100 --> 00:01:53.200
+de gestão de agentes.
+
+76
+00:01:53.200 --> 00:01:54.540
+Faltam sete peças:
+
+77
+00:01:54.540 --> 00:01:55.460
+permissões,
+
+78
+00:01:55.460 --> 00:01:57.780
+custo, filas, persistência,
+
+79
+00:01:57.780 --> 00:02:00.660
+métricas, auditoria e recuperação de falhas.
+
+80
+00:02:00.660 --> 00:02:02.600
+Por enquanto, o gestor monta à mão:
+
+81
+00:02:02.600 --> 00:02:03.940
+o que precisa do seu OK vai
+
+82
+00:02:03.940 --> 00:02:05.680
+nas instruções, o registro de uma linha
+
+83
+00:02:05.680 --> 00:02:06.800
+é a sua auditoria,
+
+84
+00:02:06.800 --> 00:02:08.320
+e a falha você mesmo pede de
+
+85
+00:02:08.320 --> 00:02:08.660
+novo.
+
+86
+00:02:08.660 --> 00:02:10.040
+A prática é o seu manual de
+
+87
+00:02:10.040 --> 00:02:11.240
+gestão, em uma página,
+
+88
+00:02:11.240 --> 00:02:11.960
+com seis campos:
+
+89
+00:02:11.960 --> 00:02:13.500
+manhã, durante, fim do dia,
+
+90
+00:02:13.500 --> 00:02:14.380
+regra de pronto,
+
+91
+00:02:14.380 --> 00:02:16.220
+registro e o que sobe para você.
+
+92
+00:02:16.220 --> 00:02:18.180
+Está pronto quando o conferidor responde:
+
+93
+00:02:18.180 --> 00:02:19.940
+manual de gestão com os seis campos
+
+94
+00:02:19.940 --> 00:02:20.400
+preenchidos.
+
+95
+00:02:20.400 --> 00:02:22.140
+A aula oito tem o modelo para
+
+96
+00:02:22.140 --> 00:02:23.140
+copiar e a prática,
+
+97
+00:02:23.140 --> 00:02:25.473
+abertos e grátis no inema ponto club.

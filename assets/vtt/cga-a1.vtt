@@ -1,0 +1,413 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.500
+Você para de esperar o Claude terminar
+
+2
+00:00:01.500 --> 00:00:03.180
+uma coisa para começar a outra.
+
+3
+00:00:03.180 --> 00:00:04.720
+Três trabalhos andam juntos,
+
+4
+00:00:04.720 --> 00:00:06.400
+e você só entra quando precisam de
+
+5
+00:00:06.400 --> 00:00:06.840
+você.
+
+6
+00:00:06.840 --> 00:00:07.780
+Hoje é assim:
+
+7
+00:00:07.780 --> 00:00:09.500
+uma conversa, um pedido,
+
+8
+00:00:09.500 --> 00:00:11.680
+espera, e só depois a próxima.
+
+9
+00:00:11.680 --> 00:00:13.380
+Eu te mostro os três degraus,
+
+10
+00:00:13.380 --> 00:00:15.360
+o mapa dos recursos novos e o
+
+11
+00:00:15.360 --> 00:00:16.920
+inventário que diz o que pode correr
+
+12
+00:00:16.920 --> 00:00:17.360
+junto.
+
+13
+00:00:17.360 --> 00:00:18.880
+Primeiro degrau: o prompt.
+
+14
+00:00:18.880 --> 00:00:20.620
+Você pede, o Claude responde,
+
+15
+00:00:20.620 --> 00:00:22.160
+você lê e decide.
+
+16
+00:00:22.160 --> 00:00:24.320
+Uma pessoa e uma IA,
+
+17
+00:00:24.320 --> 00:00:25.660
+uma coisa de cada vez.
+
+18
+00:00:25.660 --> 00:00:27.200
+Segundo degrau: o agente.
+
+19
+00:00:27.200 --> 00:00:29.200
+O Claude trabalha sozinho numa tarefa de
+
+20
+00:00:29.200 --> 00:00:30.420
+vários passos: lê,
+
+21
+00:00:30.420 --> 00:00:32.200
+escreve, confere e corrige.
+
+22
+00:00:32.200 --> 00:00:33.720
+Mas ainda é uma tarefa por vez,
+
+23
+00:00:33.720 --> 00:00:34.560
+e você espera.
+
+24
+00:00:34.560 --> 00:00:35.960
+Terceiro degrau: a gestão.
+
+25
+00:00:35.960 --> 00:00:37.860
+Várias sessões trabalham ao mesmo tempo,
+
+26
+00:00:37.860 --> 00:00:38.680
+e você coordena.
+
+27
+00:00:38.680 --> 00:00:39.460
+Um exemplo.
+
+28
+00:00:39.460 --> 00:00:40.800
+A Ana tem uma agência pequena com
+
+29
+00:00:40.800 --> 00:00:42.260
+três clientes: uma padaria,
+
+30
+00:00:42.260 --> 00:00:44.040
+uma clínica e uma loja de roupas.
+
+31
+00:00:44.040 --> 00:00:46.220
+Toda segunda, ela precisa do relatório da
+
+32
+00:00:46.220 --> 00:00:48.200
+padaria, dos posts da clínica e da
+
+33
+00:00:48.200 --> 00:00:49.480
+planilha de preços da loja.
+
+34
+00:00:49.480 --> 00:00:50.800
+Ela abria uma conversa,
+
+35
+00:00:50.800 --> 00:00:52.140
+pedia e esperava.
+
+36
+00:00:52.140 --> 00:00:53.680
+As três tarefas andavam em fila,
+
+37
+00:00:53.680 --> 00:00:55.460
+e a manhã ia
+
+38
+00:00:55.600 --> 00:00:55.840
+embora.
+
+39
+00:00:55.840 --> 00:00:57.400
+O gargalo não era o Claude.
+
+40
+00:00:57.400 --> 00:00:58.340
+Era a fila.
+
+41
+00:00:58.340 --> 00:00:59.960
+A palavra-chave é sessão:
+
+42
+00:00:59.960 --> 00:01:01.420
+uma conversa do Claude com o seu
+
+43
+00:01:01.420 --> 00:01:02.500
+próprio histórico.
+
+44
+00:01:02.500 --> 00:01:03.540
+O que você pediu,
+
+45
+00:01:03.540 --> 00:01:04.500
+o que ele fez,
+
+46
+00:01:04.500 --> 00:01:05.680
+os arquivos que leu.
+
+47
+00:01:05.680 --> 00:01:07.540
+Pense num funcionário com a sua própria
+
+48
+00:01:07.540 --> 00:01:09.220
+mesa e a sua própria pasta.
+
+49
+00:01:09.220 --> 00:01:10.880
+Três sessões, três mesas.
+
+50
+00:01:10.880 --> 00:01:12.660
+Agora a Ana dispara as três de
+
+51
+00:01:12.660 --> 00:01:14.060
+manhã e, numa tela só,
+
+52
+00:01:14.060 --> 00:01:14.960
+vê qual terminou,
+
+53
+00:01:14.960 --> 00:01:16.800
+qual trabalha e qual parou com uma
+
+54
+00:01:16.800 --> 00:01:17.320
+dúvida.
+
+55
+00:01:17.320 --> 00:01:18.680
+Ela só entra para decidir.
+
+56
+00:01:18.680 --> 00:01:21.360
+Os recursos novos cabem em quatro grupos.
+
+57
+00:01:21.360 --> 00:01:23.280
+Ver: o que está acontecendo agora?
+
+58
+00:01:23.280 --> 00:01:24.180
+A agent view,
+
+59
+00:01:24.180 --> 00:01:26.020
+com o comando claude agents,
+
+60
+00:01:26.020 --> 00:01:28.140
+e o split view do app Desktop.
+
+61
+00:01:28.140 --> 00:01:29.700
+Coordenar: quem faz o quê?
+
+62
+00:01:29.700 --> 00:01:32.380
+Segundo plano, agent teams e Projects.
+
+63
+00:01:32.380 --> 00:01:34.180
+Produzir: como o resultado chega a outra
+
+64
+00:01:34.180 --> 00:01:34.680
+pessoa?
+
+65
+00:01:34.680 --> 00:01:35.540
+Os artifacts.
+
+66
+00:01:35.540 --> 00:01:37.600
+Controlar: está tudo saudável e dentro do
+
+67
+00:01:37.600 --> 00:01:38.020
+custo?
+
+68
+00:01:38.020 --> 00:01:39.720
+Comandos como recap e skill doctor,
+
+69
+00:01:39.720 --> 00:01:40.940
+e os mods.
+
+70
+00:01:40.940 --> 00:01:42.080
+Atenção aos selos.
+
+71
+00:01:42.080 --> 00:01:43.980
+A agent view é research preview.
+
+72
+00:01:43.980 --> 00:01:46.480
+Agent teams é experimental e vem desligado.
+
+73
+00:01:46.480 --> 00:01:48.120
+Projects é beta nos planos Pro e
+
+74
+00:01:48.120 --> 00:01:48.520
+Max.
+
+75
+00:01:48.520 --> 00:01:50.220
+E rodar várias sessões não é uma
+
+76
+00:01:50.220 --> 00:01:51.900
+plataforma completa: permissões,
+
+77
+00:01:51.900 --> 00:01:54.740
+custo, filas, métricas e recuperação de falhas,
+
+78
+00:01:54.740 --> 00:01:55.880
+quem monta é você,
+
+79
+00:01:55.880 --> 00:01:56.640
+o gestor.
+
+80
+00:01:56.640 --> 00:01:57.720
+Antes de coordenar,
+
+81
+00:01:57.720 --> 00:01:58.940
+faça o inventário.
+
+82
+00:01:58.940 --> 00:02:00.320
+Trabalho um, dois e três:
+
+83
+00:02:00.320 --> 00:02:01.900
+entregas da sua semana.
+
+84
+00:02:01.900 --> 00:02:03.020
+Paralelo: sim ou não,
+
+85
+00:02:03.020 --> 00:02:03.620
+e por quê.
+
+86
+00:02:03.620 --> 00:02:05.520
+Se um trabalho usa o resultado de
+
+87
+00:02:05.520 --> 00:02:06.720
+outro, ele espera.
+
+88
+00:02:06.720 --> 00:02:07.820
+Precisa de mim quando:
+
+89
+00:02:07.820 --> 00:02:08.860
+um momento claro,
+
+90
+00:02:08.860 --> 00:02:09.960
+nunca quando der.
+
+91
+00:02:09.960 --> 00:02:11.000
+A Ana escreveu:
+
+92
+00:02:11.000 --> 00:02:12.220
+os três em paralelo;
+
+93
+00:02:12.220 --> 00:02:13.940
+ela entra para aprovar os preços da
+
+94
+00:02:13.940 --> 00:02:15.760
+loja e escolher o tema dos posts.
+
+95
+00:02:15.760 --> 00:02:17.480
+A prática está pronta quando você tem
+
+96
+00:02:17.480 --> 00:02:19.340
+três trabalhos que dá para dizer se
+
+97
+00:02:19.340 --> 00:02:22.320
+ficaram prontos, o conferidor responde OK com
+
+98
+00:02:22.320 --> 00:02:23.120
+os cinco campos,
+
+99
+00:02:23.120 --> 00:02:24.480
+e há uma linha a mais com
+
+100
+00:02:24.480 --> 00:02:25.980
+o grupo que você mais precisa.
+
+101
+00:02:25.980 --> 00:02:27.480
+A aula um tem o modelo para
+
+102
+00:02:27.480 --> 00:02:28.740
+copiar e a prática,
+
+103
+00:02:28.740 --> 00:02:30.733
+abertos e grátis no inema ponto club.

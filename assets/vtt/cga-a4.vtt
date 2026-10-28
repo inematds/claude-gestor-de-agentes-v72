@@ -1,0 +1,393 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.560
+Só chega até você o que é
+
+2
+00:00:01.560 --> 00:00:02.600
+decisão de verdade.
+
+3
+00:00:02.600 --> 00:00:04.980
+O resto, uma sessão gestora acompanha e
+
+4
+00:00:04.980 --> 00:00:05.520
+resolve.
+
+5
+00:00:05.520 --> 00:00:06.940
+Com várias sessões rodando,
+
+6
+00:00:06.940 --> 00:00:08.420
+alguém precisa ver quem terminou,
+
+7
+00:00:08.420 --> 00:00:09.880
+quem travou e o que sobe para
+
+8
+00:00:09.880 --> 00:00:10.320
+você.
+
+9
+00:00:10.320 --> 00:00:11.720
+Hoje eu te mostro esse papel,
+
+10
+00:00:11.720 --> 00:00:13.940
+os três caminhos oficiais e as instruções
+
+11
+00:00:13.940 --> 00:00:15.180
+que fazem ele funcionar.
+
+12
+00:00:15.180 --> 00:00:16.460
+Primeiro, um aviso:
+
+13
+00:00:16.460 --> 00:00:18.100
+sessão gestora não é um botão do
+
+14
+00:00:18.100 --> 00:00:18.460
+Claude.
+
+15
+00:00:18.460 --> 00:00:19.540
+É um jeito de trabalhar.
+
+16
+00:00:19.540 --> 00:00:20.900
+Em cima, você:
+
+17
+00:00:20.900 --> 00:00:22.720
+aprova, prioriza e corta.
+
+18
+00:00:22.720 --> 00:00:24.300
+No meio, a gestora:
+
+19
+00:00:24.300 --> 00:00:26.100
+acompanha, resolve o pequeno e sobe o
+
+20
+00:00:26.100 --> 00:00:26.710
+grande.
+
+21
+00:00:26.710 --> 00:00:27.920
+Embaixo, as executoras,
+
+22
+00:00:27.920 --> 00:00:29.160
+três ou quatro sessões,
+
+23
+00:00:29.160 --> 00:00:30.540
+cada uma com um trabalho só.
+
+24
+00:00:30.540 --> 00:00:32.080
+O status volta para você.
+
+25
+00:00:32.080 --> 00:00:33.480
+O papel se monta com um de
+
+26
+00:00:33.480 --> 00:00:34.220
+três caminhos.
+
+27
+00:00:34.220 --> 00:00:35.080
+Na agent view,
+
+28
+00:00:35.080 --> 00:00:36.220
+você é a gestora:
+
+29
+00:00:36.220 --> 00:00:38.020
+despacha as sessões e olha a tela.
+
+30
+00:00:38.020 --> 00:00:39.120
+Roda no seu computador.
+
+31
+00:00:39.120 --> 00:00:41.460
+Nos Projects, uma conversa coordena threads na
+
+32
+00:00:41.460 --> 00:00:43.060
+nuvem, sem o seu computador;
+
+33
+00:00:43.060 --> 00:00:44.600
+está em beta nos planos Pro e
+
+34
+00:00:44.600 --> 00:00:45.080
+Max.
+
+35
+00:00:45.080 --> 00:00:46.040
+Nos agent teams,
+
+36
+00:00:46.040 --> 00:00:47.760
+uma sessão lead coordena os colegas;
+
+37
+00:00:47.760 --> 00:00:49.720
+é experimental e vem desligado.
+
+38
+00:00:49.720 --> 00:00:51.620
+Começando agora, ou com arquivos que não
+
+39
+00:00:51.620 --> 00:00:52.680
+podem sair da máquina:
+
+40
+00:00:52.680 --> 00:00:53.340
+agent view.
+
+41
+00:00:53.340 --> 00:00:55.700
+Trabalho longo, longe do computador,
+
+42
+00:00:55.700 --> 00:00:57.100
+com dados que podem ir para a
+
+43
+00:00:57.100 --> 00:00:58.340
+nuvem: Projects.
+
+44
+00:00:58.340 --> 00:01:00.040
+Partes que precisam conversar entre si:
+
+45
+00:01:00.040 --> 00:01:00.940
+agent teams.
+
+46
+00:01:00.940 --> 00:01:03.060
+Nos três, as instruções são as mesmas.
+
+47
+00:01:03.060 --> 00:01:03.920
+Veja o modelo,
+
+48
+00:01:03.920 --> 00:01:04.740
+campo por campo,
+
+49
+00:01:04.740 --> 00:01:05.940
+com a agência da Ana.
+
+50
+00:01:05.940 --> 00:01:07.960
+Objetivo: o relatório semanal da padaria na
+
+51
+00:01:07.960 --> 00:01:08.960
+segunda às dez horas;
+
+52
+00:01:08.960 --> 00:01:10.860
+os posts da clínica e a planilha
+
+53
+00:01:10.860 --> 00:01:12.750
+de preços da loja até sexta às
+
+54
+00:01:12.750 --> 00:01:13.680
+dezoito horas.
+
+55
+00:01:13.680 --> 00:01:15.480
+Sessões: o nome de cada uma e
+
+56
+00:01:15.480 --> 00:01:16.180
+o que entrega.
+
+57
+00:01:16.180 --> 00:01:18.400
+Decide sozinha: a ordem e refazer o
+
+58
+00:01:18.400 --> 00:01:19.520
+texto que não passou.
+
+59
+00:01:19.520 --> 00:01:21.080
+Precisa do meu OK:
+
+60
+00:01:21.080 --> 00:01:22.320
+tudo que vai para o cliente,
+
+61
+00:01:22.320 --> 00:01:24.520
+preço, prazo, apagar arquivo e abrir sessão
+
+62
+00:01:24.520 --> 00:01:24.920
+nova.
+
+63
+00:01:24.920 --> 00:01:27.160
+Pronto quando: cada entrega foi conferida contra
+
+64
+00:01:27.160 --> 00:01:27.760
+o pedido.
+
+65
+00:01:27.760 --> 00:01:28.780
+Formato do status:
+
+66
+00:01:28.780 --> 00:01:29.780
+uma linha por sessão,
+
+67
+00:01:29.780 --> 00:01:31.020
+em três estados.
+
+68
+00:01:31.020 --> 00:01:31.500
+Concluído.
+
+69
+00:01:31.500 --> 00:01:33.160
+Bloqueado, com o motivo.
+
+70
+00:01:33.160 --> 00:01:34.280
+Ou precisa de você,
+
+71
+00:01:34.280 --> 00:01:35.140
+com a pergunta.
+
+72
+00:01:35.140 --> 00:01:36.000
+E quando avisar:
+
+73
+00:01:36.000 --> 00:01:37.100
+quando algo terminar,
+
+74
+00:01:37.100 --> 00:01:38.900
+travar ou precisar de você,
+
+75
+00:01:38.900 --> 00:01:40.630
+e um resumo ao meio-dia e às
+
+76
+00:01:40.630 --> 00:01:41.140
+dezessete horas.
+
+77
+00:01:41.140 --> 00:01:43.020
+Quinta, às quatorze horas,
+
+78
+00:01:43.020 --> 00:01:44.080
+chega o status.
+
+79
+00:01:44.080 --> 00:01:46.020
+A planilha da loja precisa de você:
+
+80
+00:01:46.020 --> 00:01:48.060
+a coluna de total dá duzentos reais
+
+81
+00:01:48.060 --> 00:01:49.220
+a menos que a tabela que a
+
+82
+00:01:49.220 --> 00:01:50.000
+loja mandou.
+
+83
+00:01:50.000 --> 00:01:50.800
+Uso qual número?
+
+84
+00:01:50.800 --> 00:01:53.000
+Não devolva com um resolve do jeito
+
+85
+00:01:53.000 --> 00:01:54.080
+que achar melhor.
+
+86
+00:01:54.080 --> 00:01:56.160
+Decida: usa o da tabela da loja,
+
+87
+00:01:56.160 --> 00:01:56.880
+que é a fonte.
+
+88
+00:01:56.880 --> 00:01:58.500
+E quando uma decisão se repete,
+
+89
+00:01:58.500 --> 00:02:00.120
+ela vira uma linha nas instruções.
+
+90
+00:02:00.120 --> 00:02:02.240
+A prática: preencha os sete campos para
+
+91
+00:02:02.240 --> 00:02:04.160
+um trabalho seu e cole no conferidor
+
+92
+00:02:04.160 --> 00:02:04.720
+da aula.
+
+93
+00:02:04.720 --> 00:02:06.780
+Está pronto quando ele responde OK,
+
+94
+00:02:06.780 --> 00:02:08.420
+com os sete campos e o status
+
+95
+00:02:08.420 --> 00:02:09.400
+em três estados.
+
+96
+00:02:09.400 --> 00:02:11.400
+A aula quatro tem o modelo para
+
+97
+00:02:11.400 --> 00:02:12.560
+copiar e a prática,
+
+98
+00:02:12.560 --> 00:02:14.740
+abertos e grátis no inema ponto club.

@@ -1,0 +1,361 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.800
+O trabalho das suas sessões chega ao
+
+2
+00:00:01.800 --> 00:00:02.580
+cliente num link,
+
+3
+00:00:02.580 --> 00:00:04.160
+e não num texto que só você
+
+4
+00:00:04.160 --> 00:00:04.500
+lê.
+
+5
+00:00:04.500 --> 00:00:06.820
+Hoje o resultado fica preso na conversa:
+
+6
+00:00:06.820 --> 00:00:08.900
+você copia, cola e formata.
+
+7
+00:00:08.900 --> 00:00:10.760
+Eu te mostro o caminho da conversa
+
+8
+00:00:10.760 --> 00:00:12.440
+ao link, qual tipo escolher e o
+
+9
+00:00:12.440 --> 00:00:13.240
+pedido do painel,
+
+10
+00:00:13.240 --> 00:00:14.020
+linha por linha.
+
+11
+00:00:14.020 --> 00:00:15.840
+Tudo começa numa conversa no claude ponto
+
+12
+00:00:15.840 --> 00:00:17.380
+ai: um relatório,
+
+13
+00:00:17.380 --> 00:00:18.520
+os números do mês,
+
+14
+00:00:18.520 --> 00:00:19.920
+o status das tarefas.
+
+15
+00:00:19.920 --> 00:00:20.840
+Enquanto fica ali,
+
+16
+00:00:20.840 --> 00:00:22.140
+serve só para você.
+
+17
+00:00:22.140 --> 00:00:23.920
+O artifact é uma página que o
+
+18
+00:00:23.920 --> 00:00:25.880
+Claude monta a partir da conversa e
+
+19
+00:00:25.880 --> 00:00:26.660
+que abre fora dela.
+
+20
+00:00:26.660 --> 00:00:28.080
+A página vira um link.
+
+21
+00:00:28.080 --> 00:00:30.380
+E ela pode ter IA dentro.
+
+22
+00:00:30.380 --> 00:00:32.060
+O artifact nasce privado:
+
+23
+00:00:32.060 --> 00:00:32.760
+só você vê.
+
+24
+00:00:32.760 --> 00:00:34.760
+Para mostrar, você clica em Share e
+
+25
+00:00:34.760 --> 00:00:35.720
+escolhe o acesso:
+
+26
+00:00:35.720 --> 00:00:37.800
+só você, convite por e-mail ou qualquer
+
+27
+00:00:37.800 --> 00:00:38.700
+pessoa com o link.
+
+28
+00:00:38.700 --> 00:00:40.520
+Quem abre pelo Share entra com uma
+
+29
+00:00:40.520 --> 00:00:41.360
+conta Claude.
+
+30
+00:00:41.360 --> 00:00:42.740
+Nos artifacts antigos,
+
+31
+00:00:42.740 --> 00:00:43.680
+o botão é Publish,
+
+32
+00:00:43.680 --> 00:00:45.080
+e o link abre sem conta.
+
+33
+00:00:45.080 --> 00:00:46.540
+E se o artifact usa o Claude,
+
+34
+00:00:46.540 --> 00:00:47.840
+como a caixa de perguntas,
+
+35
+00:00:47.840 --> 00:00:48.920
+ele vai por convite,
+
+36
+00:00:48.920 --> 00:00:50.220
+nunca por link aberto.
+
+37
+00:00:50.220 --> 00:00:51.340
+Qual tipo escolher?
+
+38
+00:00:51.340 --> 00:00:52.160
+Pelo uso.
+
+39
+00:00:52.160 --> 00:00:53.880
+A pessoa vai ler com calma:
+
+40
+00:00:53.880 --> 00:00:56.130
+documento, como o relatório semanal da padaria.
+
+41
+00:00:56.130 --> 00:00:57.380
+Vai olhar enquanto você fala:
+
+42
+00:00:57.380 --> 00:00:59.373
+apresentação, como as seis telas do mês
+
+43
+00:00:59.373 --> 00:01:00.260
+para a dona da padaria.
+
+44
+00:01:00.260 --> 00:01:01.800
+A peça se olha mais do que
+
+45
+00:01:01.800 --> 00:01:02.940
+se lê: design,
+
+46
+00:01:02.940 --> 00:01:04.820
+como a arte dos posts da clínica.
+
+47
+00:01:04.820 --> 00:01:06.880
+E para acompanhar status toda semana:
+
+48
+00:01:06.880 --> 00:01:08.080
+painel.
+
+49
+00:01:08.140 --> 00:01:10.360
+Documento, apresentação e design já saíram do
+
+50
+00:01:10.360 --> 00:01:10.840
+beta.
+
+51
+00:01:10.840 --> 00:01:12.520
+Painel e Motion ainda estão nele.
+
+52
+00:01:12.520 --> 00:01:14.020
+O modelo da aula pede um painel
+
+53
+00:01:14.020 --> 00:01:14.560
+de status.
+
+54
+00:01:14.560 --> 00:01:15.460
+Linha por linha.
+
+55
+00:01:15.460 --> 00:01:17.280
+Crie um artifact do tipo painel com
+
+56
+00:01:17.280 --> 00:01:18.740
+o status de três trabalhos meus.
+
+57
+00:01:18.740 --> 00:01:19.540
+Para cada um:
+
+58
+00:01:19.540 --> 00:01:22.800
+nome, situação, próximo passo e prazo.
+
+59
+00:01:22.800 --> 00:01:23.880
+Situação é concluído,
+
+60
+00:01:23.880 --> 00:01:26.160
+em andamento, bloqueado ou precisa de mim.
+
+61
+00:01:26.160 --> 00:01:27.900
+No topo, uma linha com o que
+
+62
+00:01:27.900 --> 00:01:28.880
+precisa de mim hoje.
+
+63
+00:01:28.880 --> 00:01:29.600
+E, se der,
+
+64
+00:01:29.600 --> 00:01:31.040
+uma caixa para perguntar.
+
+65
+00:01:31.040 --> 00:01:33.500
+Essa caixa é a IA embutida.
+
+66
+00:01:33.500 --> 00:01:35.480
+Quem abre pergunta em linguagem natural,
+
+67
+00:01:35.480 --> 00:01:37.020
+dentro da própria página.
+
+68
+00:01:37.020 --> 00:01:38.000
+No painel da Ana,
+
+69
+00:01:38.000 --> 00:01:38.700
+a pergunta é:
+
+70
+00:01:38.700 --> 00:01:39.740
+o que está atrasado?
+
+71
+00:01:39.740 --> 00:01:40.640
+E a resposta:
+
+72
+00:01:40.640 --> 00:01:43.100
+nada atrasado; os posts da clínica vencem
+
+73
+00:01:43.100 --> 00:01:44.920
+hoje e esperam a sua aprovação.
+
+74
+00:01:44.920 --> 00:01:45.680
+Ela responde.
+
+75
+00:01:45.680 --> 00:01:47.200
+Não publica nem envia nada.
+
+76
+00:01:47.200 --> 00:01:48.800
+O painel está em beta e pode
+
+77
+00:01:48.800 --> 00:01:50.120
+não aparecer para você.
+
+78
+00:01:50.120 --> 00:01:52.060
+Plano B: peça um artifact do tipo
+
+79
+00:01:52.060 --> 00:01:53.680
+documento com a mesma tabela de status
+
+80
+00:01:53.680 --> 00:01:54.660
+e a mesma linha no topo.
+
+81
+00:01:54.660 --> 00:01:56.300
+O conteúdo é o mesmo.
+
+82
+00:01:56.300 --> 00:01:58.280
+A prática está pronta quando o artifact
+
+83
+00:01:58.280 --> 00:01:59.360
+abre num link próprio,
+
+84
+00:01:59.360 --> 00:02:01.600
+mostra os seus três trabalhos com situação,
+
+85
+00:02:01.600 --> 00:02:03.380
+próximo passo e prazo,
+
+86
+00:02:03.380 --> 00:02:05.340
+e o acesso escolhido no Share bate
+
+87
+00:02:05.340 --> 00:02:07.100
+com quem você escreveu que pode ver.
+
+88
+00:02:07.100 --> 00:02:08.620
+A aula seis tem o modelo para
+
+89
+00:02:08.620 --> 00:02:09.640
+copiar e a prática,
+
+90
+00:02:09.640 --> 00:02:11.820
+abertos e grátis no inema ponto club.

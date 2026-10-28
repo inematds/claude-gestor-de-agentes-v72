@@ -493,6 +493,12 @@
       ]
     },
     {
+      "tipo": "video",
+      "titulo": "A aula 7 em vídeo",
+      "sub": "O mecanismo da aula explicado em cerca de dois minutos e meio.",
+      "chave": "cga-a7"
+    },
+    {
       "tipo": "quiz",
       "titulo": "Teste o que aprendeu",
       "sub": "A explicação aparece depois da sua resposta.",

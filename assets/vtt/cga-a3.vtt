@@ -1,0 +1,425 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.120
+Você dispara uma tarefa,
+
+2
+00:00:01.120 --> 00:00:02.340
+o terminal fica livre,
+
+3
+00:00:02.340 --> 00:00:03.800
+e uma tela só mostra qual sessão
+
+4
+00:00:03.800 --> 00:00:04.600
+precisa de você.
+
+5
+00:00:04.600 --> 00:00:06.540
+Até aqui, cada pedido prendia você na
+
+6
+00:00:06.540 --> 00:00:07.340
+frente da conversa,
+
+7
+00:00:07.340 --> 00:00:08.460
+esperando a resposta.
+
+8
+00:00:08.460 --> 00:00:09.720
+Hoje eu te mostro o caminho de
+
+9
+00:00:09.720 --> 00:00:10.900
+uma sessão em segundo plano,
+
+10
+00:00:10.900 --> 00:00:12.420
+os comandos e a tela que junta
+
+11
+00:00:12.420 --> 00:00:12.880
+todas.
+
+12
+00:00:12.880 --> 00:00:14.340
+O caminho tem quatro partes.
+
+13
+00:00:14.340 --> 00:00:15.480
+Primeiro, o pedido:
+
+14
+00:00:15.480 --> 00:00:17.000
+o comando claude com bg,
+
+15
+00:00:17.000 --> 00:00:18.440
+e o pedido entre aspas.
+
+16
+00:00:18.440 --> 00:00:19.780
+Depois, o supervisor,
+
+17
+00:00:19.780 --> 00:00:21.360
+um processo que cuida das sessões por
+
+18
+00:00:21.360 --> 00:00:21.800
+baixo.
+
+19
+00:00:21.800 --> 00:00:23.260
+Por isso você pode fechar o terminal
+
+20
+00:00:23.260 --> 00:00:24.220
+e o trabalho continua,
+
+21
+00:00:24.220 --> 00:00:25.860
+com o computador ligado.
+
+22
+00:00:25.860 --> 00:00:27.240
+Depois, a agent view,
+
+23
+00:00:27.240 --> 00:00:27.940
+a tela com todas.
+
+24
+00:00:27.940 --> 00:00:28.820
+E por fim,
+
+25
+00:00:28.820 --> 00:00:31.000
+você, que só entra onde é preciso.
+
+26
+00:00:31.000 --> 00:00:32.200
+Veja o modelo da aula,
+
+27
+00:00:32.200 --> 00:00:33.520
+linha por linha.
+
+28
+00:00:33.520 --> 00:00:34.720
+Primeiro, o cd,
+
+29
+00:00:34.720 --> 00:00:35.960
+que entra numa pasta.
+
+30
+00:00:35.960 --> 00:00:36.920
+Para achar o caminho,
+
+31
+00:00:36.920 --> 00:00:38.340
+arraste a pasta para a janela do
+
+32
+00:00:38.340 --> 00:00:40.020
+terminal: ele aparece escrito.
+
+33
+00:00:40.020 --> 00:00:41.010
+Na segunda linha,
+
+34
+00:00:41.010 --> 00:00:41.960
+claude com bg,
+
+35
+00:00:41.960 --> 00:00:43.120
+nome o que tem aqui,
+
+36
+00:00:43.120 --> 00:00:43.960
+e o pedido:
+
+37
+00:00:43.960 --> 00:00:45.940
+liste os arquivos desta pasta e diga
+
+38
+00:00:45.940 --> 00:00:47.360
+em três linhas o que tem aqui,
+
+39
+00:00:47.360 --> 00:00:49.120
+só leia, não altere nada.
+
+40
+00:00:49.120 --> 00:00:50.420
+Na terceira, outra sessão,
+
+41
+00:00:50.420 --> 00:00:51.640
+nome contar arquivos,
+
+42
+00:00:51.640 --> 00:00:53.120
+que conta os arquivos da pasta.
+
+43
+00:00:53.120 --> 00:00:54.620
+A flag vem antes do pedido.
+
+44
+00:00:54.620 --> 00:00:56.660
+Em dez segundos as duas estão trabalhando,
+
+45
+00:00:56.660 --> 00:00:57.940
+e o terminal está livre.
+
+46
+00:00:57.940 --> 00:00:59.420
+Agora, claude agents.
+
+47
+00:00:59.420 --> 00:01:00.660
+É a agent view,
+
+48
+00:01:00.660 --> 00:01:02.200
+com as sessões em grupos.
+
+49
+00:01:02.200 --> 00:01:04.080
+Needs input: precisa de você,
+
+50
+00:01:04.080 --> 00:01:05.080
+e fica no topo.
+
+51
+00:01:05.080 --> 00:01:06.660
+Working: trabalhando.
+
+52
+00:01:06.660 --> 00:01:09.320
+Completed: terminadas, e também as que falharam
+
+53
+00:01:09.320 --> 00:01:10.400
+ou foram paradas.
+
+54
+00:01:10.400 --> 00:01:12.280
+Ready for review é para quem programa:
+
+55
+00:01:12.280 --> 00:01:13.480
+código esperando revisão.
+
+56
+00:01:13.480 --> 00:01:14.755
+Na caixa de texto,
+
+57
+00:01:14.755 --> 00:01:16.400
+s dois pontos blocked mostra tudo que
+
+58
+00:01:16.400 --> 00:01:17.140
+espera você.
+
+59
+00:01:17.140 --> 00:01:18.700
+A Ana tem uma agência com três
+
+60
+00:01:18.700 --> 00:01:19.280
+clientes.
+
+61
+00:01:19.280 --> 00:01:20.880
+A sessão dos posts da clínica está
+
+62
+00:01:20.880 --> 00:01:22.740
+em Needs input porque pediu permissão:
+
+63
+00:01:22.740 --> 00:01:24.340
+antes de rodar um comando ou mexer
+
+64
+00:01:24.340 --> 00:01:26.100
+num arquivo, o Claude pergunta se pode.
+
+65
+00:01:26.100 --> 00:01:26.980
+Ela tecla Enter,
+
+66
+00:01:26.980 --> 00:01:28.200
+vê um resumo do que a sessão
+
+67
+00:01:28.200 --> 00:01:29.440
+fez e a pergunta parada,
+
+68
+00:01:29.440 --> 00:01:30.380
+e responde sim.
+
+69
+00:01:30.380 --> 00:01:31.940
+Depois tecla a seta para a esquerda
+
+70
+00:01:31.940 --> 00:01:33.360
+no prompt vazio e volta para a
+
+71
+00:01:33.360 --> 00:01:33.720
+lista.
+
+72
+00:01:33.720 --> 00:01:34.820
+A sessão segue sozinha.
+
+73
+00:01:34.820 --> 00:01:35.760
+Para só espiar,
+
+74
+00:01:35.760 --> 00:01:36.440
+claude logs.
+
+75
+00:01:36.440 --> 00:01:37.960
+Para encerrar, claude stop.
+
+76
+00:01:37.960 --> 00:01:39.020
+Agora os limites.
+
+77
+00:01:39.020 --> 00:01:40.820
+A agent view é uma prévia de
+
+78
+00:01:40.820 --> 00:01:42.600
+pesquisa desde maio de dois mil e
+
+79
+00:01:42.600 --> 00:01:43.080
+vinte e seis:
+
+80
+00:01:43.080 --> 00:01:43.720
+pode mudar.
+
+81
+00:01:43.720 --> 00:01:45.560
+As sessões rodam no seu computador,
+
+82
+00:01:45.560 --> 00:01:46.960
+então ele precisa ficar ligado.
+
+83
+00:01:46.960 --> 00:01:48.840
+O bg não combina com o modo
+
+84
+00:01:48.840 --> 00:01:49.320
+p.
+
+85
+00:01:49.320 --> 00:01:51.300
+Os subagentes que uma sessão cria por
+
+86
+00:01:51.300 --> 00:01:53.280
+dentro não aparecem como linhas separadas.
+
+87
+00:01:53.280 --> 00:01:54.540
+E se uma sessão falhar,
+
+88
+00:01:54.540 --> 00:01:55.700
+ela vai para Completed:
+
+89
+00:01:55.700 --> 00:01:57.300
+veja o motivo com claude logs e
+
+90
+00:01:57.300 --> 00:01:58.160
+despache de novo.
+
+91
+00:01:58.160 --> 00:01:59.200
+Não usa terminal?
+
+92
+00:01:59.200 --> 00:02:00.360
+No app Desktop,
+
+93
+00:02:00.360 --> 00:02:01.140
+na aba Code,
+
+94
+00:02:01.140 --> 00:02:02.920
+o mais New abre outra sessão,
+
+95
+00:02:02.920 --> 00:02:04.480
+o Control Tab troca entre elas,
+
+96
+00:02:04.480 --> 00:02:06.440
+e o sistema avisa quando uma termina.
+
+97
+00:02:06.440 --> 00:02:09.100
+A prática: despache as duas sessões só
+
+98
+00:02:09.100 --> 00:02:10.960
+de leitura e rode claude agents com
+
+99
+00:02:10.960 --> 00:02:11.480
+json.
+
+100
+00:02:11.480 --> 00:02:13.180
+Está pronto quando a saída cita os
+
+101
+00:02:13.180 --> 00:02:14.360
+dois nomes que você deu.
+
+102
+00:02:14.360 --> 00:02:16.527
+Depois, entre numa sessão e volte para
+
+103
+00:02:16.527 --> 00:02:17.120
+a lista.
+
+104
+00:02:17.120 --> 00:02:18.500
+A aula três tem o modelo para
+
+105
+00:02:18.500 --> 00:02:19.560
+copiar e a prática,
+
+106
+00:02:19.560 --> 00:02:21.693
+abertos e grátis no inema ponto club.
