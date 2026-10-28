@@ -1,0 +1,594 @@
+{
+  "slug": "recursos",
+  "num": 9,
+  "menu": "Recursos",
+  "titulo": "Guia dos recursos: o que é cada um, e um exemplo",
+  "titulo_curto": "Guia dos recursos",
+  "minutos": 15,
+  "lead": "Esta é a aula de consulta. Aqui estão todos os recursos do curso num lugar só, em cinco grupos: rodar em paralelo, coordenar, nuvem, entregar e controlar. Cada um tem o que é em uma frase, o status (pronto, beta ou experimental), quando usar e um exemplo na agência da Ana. Volte aqui sempre que esquecer um comando.",
+  "objetivo": "achar o recurso certo para cada situação e usar o exemplo dele como ponto de partida no seu trabalho.",
+  "competencias": [
+    "escolher-recurso-certo",
+    "consultar-comandos",
+    "reconhecer-status-do-recurso"
+  ],
+  "aprende": [
+    {
+      "icone": "camadas",
+      "t": "Os cinco grupos de recursos numa figura só"
+    },
+    {
+      "icone": "lista",
+      "t": "O que é cada recurso, em linguagem simples"
+    },
+    {
+      "icone": "check",
+      "t": "O status de cada um: pronto, beta ou experimental"
+    },
+    {
+      "icone": "caneta",
+      "t": "Um exemplo pronto de cada, na agência da Ana"
+    }
+  ],
+  "hero_alt": "Um robô humanoide aponta para um quadro escuro com cartões de ferramentas organizados em colunas.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "Os cinco grupos de recursos",
+      "sub": "Toque ou clique em cada grupo.",
+      "legenda": "Rodar em paralelo, coordenar, levar para a nuvem, entregar o resultado e controlar o custo.",
+      "rolagem": true,
+      "rolagem_fim": {
+        "titulo": "O mapa inteiro",
+        "texto": "Cada grupo resolve um problema: fazer várias coisas ao mesmo tempo, não se perder entre elas, continuar com o computador desligado, mostrar o resultado e não gastar demais.",
+        "curto": "O mapa inteiro"
+      },
+      "nos": [
+        {
+          "icone": "terminal",
+          "titulo": "Rodar em paralelo",
+          "sub": "no terminal",
+          "itens": [
+            {
+              "t": "claude --bg"
+            },
+            {
+              "t": "claude agents"
+            },
+            {
+              "t": "attach · logs · stop"
+            }
+          ],
+          "detalhe": "Recursos do Claude Code no terminal para deixar várias sessões trabalhando sozinhas e ver todas numa tela só. Status: research preview (prévia, pode mudar)."
+        },
+        {
+          "icone": "usuario",
+          "titulo": "Coordenar",
+          "sub": "a sessão gestora",
+          "forte": true,
+          "itens": [
+            {
+              "t": "conversa entre sessões (Desktop)"
+            },
+            {
+              "t": "agent teams"
+            },
+            {
+              "t": "/btw"
+            }
+          ],
+          "detalhe": "Recursos para uma sessão acompanhar as outras e só trazer a você o que é decisão. No app Desktop, a própria sessão lê e avisa as outras. Agent teams é experimental e vem desligado."
+        },
+        {
+          "icone": "nuvem",
+          "titulo": "Nuvem",
+          "sub": "Projects",
+          "itens": [
+            {
+              "t": "uma thread por tarefa"
+            },
+            {
+              "t": "memória e instruções"
+            },
+            {
+              "t": "Overview"
+            }
+          ],
+          "detalhe": "Projects é uma conversa que coordena várias tarefas rodando na nuvem, mesmo com o seu computador desligado. Beta pública nos planos Pro e Max, liberando aos poucos."
+        },
+        {
+          "icone": "compartilhar",
+          "titulo": "Entregar",
+          "sub": "Artifacts",
+          "itens": [
+            {
+              "t": "documento · slides · design"
+            },
+            {
+              "t": "painel e Motion (beta)"
+            },
+            {
+              "t": "link para a equipe"
+            }
+          ],
+          "detalhe": "O resultado da conversa vira uma página pronta no claude.ai: documento, apresentação, design ou painel. É privado até você decidir compartilhar o link."
+        },
+        {
+          "icone": "grafico",
+          "titulo": "Controlar",
+          "sub": "custo e saúde",
+          "itens": [
+            {
+              "t": "/usage · /context"
+            },
+            {
+              "t": "/skill-doctor · /doctor"
+            },
+            {
+              "t": "/advisor · /recap · /statusline"
+            }
+          ],
+          "detalhe": "Comandos que você digita dentro da sessão para medir o consumo, enxugar o contexto, diagnosticar a instalação e deixar tudo à vista na barra de status."
+        }
+      ]
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Rodar em paralelo (terminal)",
+      "sub": "Recursos do Claude Code no terminal. Status de todos: research preview. Os que começam com claude você digita no terminal; os que começam com / você digita dentro da sessão.",
+      "passos": [
+        {
+          "titulo": "claude --bg",
+          "sub": "segundo plano",
+          "texto": [
+            "O que é: começa uma sessão que trabalha sozinha, sem ocupar o seu terminal. Ela mostra um código curto (o id) e os comandos para acompanhar.",
+            "Quando usar: numa tarefa que demora e não precisa de você a cada passo. Ponha o --bg logo depois de claude."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "claude --bg --name padaria \"monte o relatório semanal da padaria com os números de segunda-feira\""
+          }
+        },
+        {
+          "titulo": "claude agents",
+          "sub": "a tela de todas",
+          "texto": [
+            "O que é: a agent view, uma tela com todas as sessões em segundo plano, em grupos. Needs input = precisa de você. Working = trabalhando. Ready for review = tem um PR (pedido de mudança no código) esperando revisão. Completed = terminadas.",
+            "Quando usar: para ver de uma vez quem precisa de você. Enter entra numa sessão; ← no prompt vazio volta para a lista. Na caixa de busca, s:blocked mostra só quem espera por você."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "Ana digita claude agents e vê a sessão da clínica em Needs input: ela quer saber qual foto usar no post de quarta. Ana aperta Enter, responde e volta com ←."
+          }
+        },
+        {
+          "titulo": "attach · logs · stop",
+          "sub": "uma sessão só",
+          "texto": [
+            "O que é: três comandos para uma sessão específica. claude attach [id] abre a sessão no terminal. claude logs [id] mostra o que ela fez por último, sem entrar. claude stop [id] para a sessão.",
+            "Quando usar: quando você quer espiar ou parar uma sessão sem abrir a tela de todas."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "claude logs [id da sessão da loja] mostra que a planilha de preços já tem a coluna nova. Ana não precisa entrar."
+          }
+        },
+        {
+          "titulo": "/background",
+          "sub": "mandar para trás",
+          "texto": [
+            "O que é: manda a sessão em que você está para o segundo plano. A tecla ← no prompt vazio faz o mesmo.",
+            "Quando usar: você começou uma tarefa na sessão normal, percebeu que vai demorar e quer o terminal de volta."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "Ana começou a planilha de preços da loja na sessão normal. Vai demorar: ela digita /background e a sessão aparece no claude agents, trabalhando."
+          }
+        },
+        {
+          "titulo": "/color",
+          "sub": "uma cor por sessão",
+          "texto": [
+            "O que é: dá uma cor à sessão. A cor aparece na agent view.",
+            "Quando usar: quando você tem várias sessões e quer reconhecer cada uma de relance."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "Ana digita /color em cada sessão e escolhe uma cor por cliente: na lista, ela acha a da padaria, a da clínica e a da loja sem ler o nome."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Coordenar (a sessão gestora)",
+      "sub": "Sessão gestora é um papel, não um botão: uma sessão que acompanha as outras. Estes são os recursos que fazem esse papel.",
+      "passos": [
+        {
+          "titulo": "Conversa entre sessões",
+          "sub": "app Desktop · pronto",
+          "texto": [
+            "O que é: no app Desktop, aba Code, uma sessão lista as outras sessões dessa aba, lê o que cada uma fez e manda recado entre elas. Você pede em linguagem simples.",
+            "Limite: ela vê só as sessões do próprio Desktop (não as da nuvem nem as do terminal), por padrão as 20 mais recentes."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "Numa sessão nova, Ana pergunta: \"qual sessão mexeu no relatório da padaria?\" e depois pede: \"avise a sessão da loja que a tabela de preços mudou\"."
+          }
+        },
+        {
+          "titulo": "Várias sessões lado a lado",
+          "sub": "app Desktop · pronto",
+          "texto": [
+            "O que é: no app Desktop, Ctrl+N (Cmd+N no Mac) abre uma sessão nova e Ctrl+Tab troca entre elas. Alt+clique (Option no Mac) numa sessão da barra abre as duas lado a lado.",
+            "Quando usar: para acompanhar duas sessões ao mesmo tempo sem trocar de aba."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "Ana deixa a sessão dos posts da clínica à esquerda e a da planilha da loja à direita, e vê as duas andando."
+          }
+        },
+        {
+          "titulo": "Agent teams",
+          "sub": "terminal · experimental",
+          "texto": [
+            "O que é: uma sessão vira a líder (lead) e cria colegas (teammates). Cada colega trabalha no próprio contexto, eles conversam entre si e dividem uma lista de tarefas. Vem desligado: ligue com CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1.",
+            "Limites: um time por sessão, colega não cria colega, a líder é fixa. Antes de montar time, veja se sessões separadas já resolvem: é mais leve."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "\"Monte um time com dois colegas: um escreve os posts da semana da clínica e o outro revisa cada post antes de mim.\""
+          }
+        },
+        {
+          "titulo": "/btw",
+          "sub": "pergunta de lado · pronto",
+          "texto": [
+            "O que é: uma pergunta rápida que não interrompe a sessão nem entra no histórico. Ela responde só com o que a sessão já sabe, sem usar ferramentas. No Desktop, o mesmo é o side chat (Ctrl+; ou Cmd+; no Mac).",
+            "Quando usar: para tirar uma dúvida no meio de uma tarefa longa sem atrapalhar."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "Enquanto a sessão da loja preenche a planilha: /btw em qual coluna você está agora?"
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Nuvem (Projects)",
+      "sub": "Beta pública nos planos Pro e Max, liberando aos poucos; ainda não em Team e Enterprise. Fica na barra lateral do claude.ai/code ou na aba Code do app Desktop. Antes de usar, decida o que pode e o que não pode subir para a nuvem.",
+      "passos": [
+        {
+          "titulo": "Projeto e threads",
+          "sub": "uma conversa, várias tarefas",
+          "texto": [
+            "O que é: um projeto é uma conversa só, em que o Claude abre uma thread (uma tarefa) para cada trabalho. Cada thread costuma ser uma sessão na nuvem e continua com o seu computador desligado.",
+            "Quando usar: quando você quer deixar trabalho andando sem depender da sua máquina."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "Ana cria o projeto Agência e pede: \"proponha uma thread para cada cliente e espere meu OK\"."
+          }
+        },
+        {
+          "titulo": "Memória e instruções",
+          "sub": "o que vale para todas",
+          "texto": [
+            "O que é: as instruções do projeto são o combinado que toda thread nova recebe: para que serve, como conferir antes de dizer pronto e o que precisa do seu OK. A memória são as notas que o Claude grava: decisões, requisitos, armadilhas.",
+            "Quando usar: no começo do projeto, para não repetir as mesmas regras em cada tarefa."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "Instruções da Ana: \"Toda entrega passa pela regra de pronto antes de você dizer que terminou. Nada é publicado sem o meu OK. No máximo duas threads ao mesmo tempo.\""
+          }
+        },
+        {
+          "titulo": "Overview e status",
+          "sub": "o painel do projeto",
+          "texto": [
+            "O que é: um painel ao lado que acompanha as threads e mostra um ponto quando uma espera por você. O app Desktop avisa quando uma thread erra ou precisa de você.",
+            "Quando usar: para saber, de relance, o que está andando e o que está parado."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "De manhã, Ana escreve no projeto: \"status de todas as threads\". A thread dos posts da clínica está esperando a aprovação dela."
+          }
+        },
+        {
+          "titulo": "Rodar no seu computador",
+          "sub": "Work locally · remote-control",
+          "texto": [
+            "O que é: dá para pedir que uma thread rode no seu computador em vez da nuvem (Work locally, ou claude remote-control no terminal).",
+            "Atenção: aí o computador precisa estar ligado e acordado, como numa sessão local."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "A planilha de preços da loja fica só no computador da Ana. Ela pede que essa thread rode no computador dela e deixa a máquina ligada."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Entregar (Artifacts)",
+      "sub": "No claude.ai, o resultado da conversa vira uma página pronta. O artifact publicado é privado até você compartilhar.",
+      "passos": [
+        {
+          "titulo": "Documento, slides e design",
+          "sub": "pronto",
+          "texto": [
+            "O que é: o Claude monta um documento, uma apresentação ou um design a partir da conversa, com visual pronto.",
+            "Quando usar: quando o resultado vai para alguém ler, e não só para você."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "\"Transforme o relatório semanal da padaria num documento de uma página, com os três números principais no alto.\""
+          }
+        },
+        {
+          "titulo": "Painel e Motion",
+          "sub": "beta",
+          "texto": [
+            "O que é: painel (dashboard) é uma página com números e gráficos. Motion é um vídeo animado feito por código, que exporta em MP4. Os dois ainda estão em beta.",
+            "Quando usar: quando uma tabela fica mais clara como gráfico, ou quando você quer uma animação curta."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "\"Faça um painel com a planilha de preços da loja: os dez produtos mais caros e a variação desde o mês passado.\""
+          }
+        },
+        {
+          "titulo": "IA dentro e link",
+          "sub": "compartilhar",
+          "texto": [
+            "O que é: o artifact pode ter IA embutida (a pessoa pergunta em linguagem simples dentro da página) e pode ser compartilhado por link. Quem abre precisa entrar com uma conta Claude.",
+            "Quando usar: para a equipe ou o cliente consultarem o resultado sem pedir a você."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "Ana compartilha o link do painel da loja com a dona da loja, que pergunta na própria página: \"qual produto subiu mais?\"."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Controlar (custo e saúde)",
+      "sub": "Comandos que você digita dentro da sessão do Claude Code.",
+      "passos": [
+        {
+          "titulo": "/usage e /context",
+          "sub": "medir",
+          "texto": [
+            "O que é: /usage mostra o custo da sessão e quanto do limite do plano você já usou. /context mostra uma grade colorida do que ocupa o contexto. No app Desktop, o anel ao lado do seletor de modelo mostra o uso.",
+            "Quando usar: antes de abrir mais sessões, e sempre que o limite parecer acabar rápido."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "Antes de abrir a sessão dos posts da clínica, Ana roda /usage e vê quanto do limite de 5 horas ainda tem."
+          }
+        },
+        {
+          "titulo": "/skill-doctor",
+          "sub": "enxugar",
+          "texto": [
+            "O que é: mostra quais skills carregadas você não usa, quanto contexto elas custam e onde desligar cada uma. Skill é uma pasta com instruções que o Claude pode usar; a lista de todas entra em cada mensagem.",
+            "Quando usar: quando o /context mostra muita coisa carregada sem uso."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "Na sessão da padaria, /skill-doctor mostra duas skills que Ana testou uma vez e nunca mais usou. Ela desliga as duas."
+          }
+        },
+        {
+          "titulo": "/doctor",
+          "sub": "diagnosticar",
+          "texto": [
+            "O que é: diagnóstico da instalação e da configuração. Dentro da sessão, /doctor propõe correções e espera você confirmar. No terminal, claude doctor só lê e mostra.",
+            "Quando usar: quando algo não funciona como antes, ou depois de instalar um mod."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "Depois de instalar um mod, Ana roda claude doctor para ver se ficou algo errado, antes de mexer em qualquer coisa."
+          }
+        },
+        {
+          "titulo": "/advisor",
+          "sub": "reforço nas decisões",
+          "texto": [
+            "O que é: liga um modelo mais forte que o Claude consulta nos momentos-chave: /advisor fable, /advisor opus ou /advisor sonnet. /advisor off desliga.",
+            "Atenção: consultar outro modelo gasta mais. Use só onde a decisão vale."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "Na sessão que monta a regra de pronto dos posts da clínica, Ana liga /advisor opus. Nas outras, deixa desligado."
+          }
+        },
+        {
+          "titulo": "/recap",
+          "sub": "retomar",
+          "texto": [
+            "O que é: um resumo de uma linha do que a sessão fez, na hora.",
+            "Quando usar: ao voltar para uma sessão depois de um tempo fora."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "Ana volta do almoço, entra na sessão da loja e digita /recap: uma linha diz que faltam duas categorias na planilha."
+          }
+        },
+        {
+          "titulo": "/statusline",
+          "sub": "deixar à vista",
+          "texto": [
+            "O que é: a status line é a barra no rodapé do Claude Code. Com /statusline seguido do que você quer ver, o Claude monta essa barra sozinho.",
+            "Quando usar: para ver o tempo todo o uso do contexto e do limite do plano, sem digitar comando."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "/statusline mostre a pasta, o modelo e o uso do contexto e do limite de 5 horas em %"
+          }
+        },
+        {
+          "titulo": "Mods",
+          "sub": "mudar a interface",
+          "texto": [
+            "O que é: mod é um plugin que muda como o Claude Code aparece e se comporta: uma faixa, um painel, um aviso, um comando novo. Mods não têm proteção (sandbox).",
+            "Antes de instalar: claude plugin validate ./pasta-do-mod lista o que ele faz sozinho (hooks) e o que ele pede. Para começar sem nenhuma customização: claude --safe-mode."
+          ],
+          "exemplo": {
+            "rot": "Exemplo na agência da Ana",
+            "texto": "Ana baixa um mod do repositório inema-mods e roda claude plugin validate na pasta dele antes de instalar."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "A cola de comandos",
+      "sub": "Todos os comandos do guia, para copiar. Troque o que está entre < > pelo seu.",
+      "blocos": [
+        {
+          "rot": "No terminal · rodar em paralelo",
+          "icone": "terminal",
+          "conteudo": "claude --bg --name <nome> \"<pedido>\"\nclaude agents\nclaude attach <id>\nclaude logs <id>\nclaude stop <id>"
+        },
+        {
+          "rot": "Na sessão · mandar para trás, colorir, perguntar de lado",
+          "icone": "chat",
+          "conteudo": "/background\n/color\n/btw <pergunta>"
+        },
+        {
+          "rot": "Configuração · ligar o agent teams (experimental)",
+          "icone": "camadas",
+          "conteudo": "export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1"
+        },
+        {
+          "rot": "No projeto (Projects) · pedidos de coordenação",
+          "icone": "nuvem",
+          "conteudo": "proponha uma thread para cada tarefa e espere meu OK\nno máximo duas threads ao mesmo tempo\nstatus de todas as threads"
+        },
+        {
+          "rot": "Na sessão · custo e saúde",
+          "icone": "grafico",
+          "conteudo": "/usage\n/context\n/skill-doctor\n/doctor\n/advisor opus\n/advisor off\n/recap\n/statusline mostre a pasta, o modelo e o uso do contexto e do limite de 5 horas em %"
+        },
+        {
+          "rot": "No terminal · conferir um mod e começar limpo",
+          "icone": "escudo",
+          "conteudo": "claude doctor\nclaude plugin validate ./pasta-do-mod\nclaude --safe-mode"
+        }
+      ]
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Prática: três recursos no seu trabalho",
+      "sub": "Use um trabalho seu de verdade, de preferência um dos que você listou na aula 1.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "E1 · O que existe no seu Claude",
+          "min": "5 min",
+          "texto": "No terminal, rode claude --version e anote a versão. Abra a barra lateral do claude.ai/code ou a aba Code do app Desktop e veja se aparece Projects. Os recursos em prévia e beta mudam e chegam aos poucos.",
+          "pronto": "você anotou a versão do Claude Code e se tem ou não Projects."
+        },
+        {
+          "id": "e2",
+          "titulo": "E2 · Três grupos, três testes",
+          "min": "15 min",
+          "texto": "Escolha um recurso de três grupos diferentes do mapa (por exemplo: claude --bg, a conversa entre sessões e /usage). Use o exemplo da Ana como modelo e troque pelo seu trabalho.",
+          "pronto": "você escreveu, para cada um dos três, o comando ou pedido que usou e o que apareceu na tela."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Teste: qual recurso?",
+      "sub": "Cada pergunta é uma situação. A explicação aparece depois da sua resposta.",
+      "perguntas": [
+        {
+          "p": "Ana quer ver, numa tela só, qual das três sessões em segundo plano está esperando por ela. O que ela usa?",
+          "opcoes": [
+            "/recap, que resume a sessão em uma linha.",
+            "claude agents, que mostra todas as sessões e quem está em Needs input.",
+            "/btw, que faz uma pergunta de lado.",
+            "/usage, que mostra o uso do plano."
+          ],
+          "certa": 1,
+          "explica": "A agent view (claude agents) junta as sessões em segundo plano e põe no topo as que precisam de você. O /recap resume só a sessão em que você está.",
+          "ref": "passos"
+        },
+        {
+          "p": "Ana vai viajar e quer que os posts da clínica continuem sendo feitos com o computador dela desligado. Qual recurso serve?",
+          "opcoes": [
+            "claude --bg, porque a sessão em segundo plano não depende da máquina.",
+            "A conversa entre sessões do app Desktop.",
+            "Uma thread de um projeto no Projects, rodando na nuvem.",
+            "Agent teams, porque o time trabalha sozinho."
+          ],
+          "certa": 2,
+          "explica": "Só a thread na nuvem segue com o computador desligado. Sessão em segundo plano, conversa entre sessões do Desktop e agent teams rodam na máquina da Ana, que precisa estar ligada.",
+          "ref": "passos"
+        },
+        {
+          "p": "Qual destes recursos é experimental e vem desligado?",
+          "opcoes": [
+            "Agent teams.",
+            "/usage.",
+            "A conversa entre sessões do app Desktop.",
+            "Documento e slides nos Artifacts."
+          ],
+          "certa": 0,
+          "explica": "Agent teams precisa ser ligado com CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1. Os outros três já vêm prontos para usar.",
+          "ref": "passos"
+        },
+        {
+          "p": "Ana baixou um mod e quer saber o que ele faz sozinho antes de instalar. Qual comando ela roda?",
+          "opcoes": [
+            "/skill-doctor",
+            "/advisor opus",
+            "claude plugin validate ./pasta-do-mod",
+            "/statusline"
+          ],
+          "certa": 2,
+          "explica": "O claude plugin validate lista os hooks (o que roda sozinho) e o que o mod pede. Mods não têm sandbox, por isso a conferência vem antes de instalar.",
+          "ref": "codigo"
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "O guia em três frases",
+      "itens": [
+        {
+          "t": "Cinco grupos",
+          "texto": "Rodar em paralelo, coordenar, nuvem, entregar e controlar: cada grupo resolve um problema da gestão de agentes."
+        },
+        {
+          "t": "Status importa",
+          "texto": "Agent view é prévia, Projects é beta, agent teams é experimental. Confira no seu Claude antes de contar com um recurso."
+        },
+        {
+          "t": "Comece pelo exemplo",
+          "texto": "Cada recurso tem um exemplo da Ana: copie, troque pelo seu trabalho e teste."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para ir além",
+      "links": [
+        {
+          "t": "Status line do Claude Code (documentação oficial, em inglês)",
+          "href": "https://code.claude.com/docs/en/statusline",
+          "icone": "lista"
+        },
+        {
+          "t": "inema-mods: 18 mods em português testados",
+          "href": "https://github.com/inematds/inema-mods",
+          "icone": "git"
+        }
+      ]
+    }
+  ]
+}

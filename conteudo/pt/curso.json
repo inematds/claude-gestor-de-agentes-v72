@@ -83,7 +83,7 @@
     }
   },
   "inicio": {
-    "kicker": "Curso · 8 aulas · sessões, nuvem, artifacts e custo",
+    "kicker": "Curso · 8 aulas + guia dos recursos · sessões, nuvem, artifacts e custo",
     "titulo": "Saia do chat: coordene uma equipe de agentes no Claude",
     "lead": "O Claude ganhou recursos para rodar várias sessões ao mesmo tempo, em segundo plano e na nuvem, e para mostrar numa tela só quem terminou, quem travou e quem precisa de você. Em oito aulas curtas você aprende cada peça, monta sua sessão gestora e sai com um jeito de administrar sua força de trabalho digital.",
     "cta": "Começar pela aula 1",
@@ -111,7 +111,7 @@
       }
     ],
     "aulas_titulo": "As aulas",
-    "aulas_sub": "Da virada (chat → gestão) às sessões em segundo plano, à sessão gestora, à nuvem, aos artifacts, ao custo e ao seu sistema de gestão. Cada aula tem diagrama, modelo para copiar, prática com \"pronto quando\" e teste comentado.",
+    "aulas_sub": "Da virada (chat → gestão) às sessões em segundo plano, à sessão gestora, à nuvem, aos artifacts, ao custo e ao seu sistema de gestão. No fim, um guia de consulta com cada recurso, o status e um exemplo. Cada aula tem diagrama, modelo para copiar, prática com \"pronto quando\" e teste comentado.",
     "blocos": [
       {
         "t": "Para quem é",
