@@ -1,0 +1,376 @@
+{
+  "slug": "segundo-plano",
+  "num": 3,
+  "menu": "2º plano",
+  "titulo": "Segundo plano: várias sessões trabalhando, uma tela para ver todas",
+  "titulo_curto": "Sessões em 2º plano",
+  "minutos": 15,
+  "lead": "Até aqui, cada tarefa prendia você na frente da conversa. Com o segundo plano, você dispara uma sessão, libera o terminal e ela segue trabalhando. A agent view junta todas numa tela só e põe no topo as que precisam de você. Nesta aula você manda duas tarefas leves para o segundo plano e aprende a entrar, espiar e parar cada uma.",
+  "objetivo": "Mandar tarefas para o segundo plano com claude --bg e acompanhar todas na agent view.",
+  "competencias": [
+    "despachar-sessao-em-segundo-plano",
+    "acompanhar-sessoes-na-agent-view",
+    "entrar-e-sair-de-uma-sessao"
+  ],
+  "aprende": [
+    {
+      "icone": "terminal",
+      "t": "Disparar uma sessão que trabalha sem prender você"
+    },
+    {
+      "icone": "lista",
+      "t": "Ler os grupos da agent view"
+    },
+    {
+      "icone": "seta",
+      "t": "Entrar numa sessão, ver o que ela fez e voltar"
+    },
+    {
+      "icone": "cadeado",
+      "t": "O que o segundo plano ainda não faz"
+    }
+  ],
+  "hero_alt": "Sala escura com várias telas acesas trabalhando sozinhas sobre as mesas, robôs humanoides em algumas, e uma cadeira vazia.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "O caminho de uma sessão em segundo plano",
+      "sub": "Toque ou clique em cada etapa.",
+      "nos": [
+        {
+          "icone": "terminal",
+          "titulo": "Pedido",
+          "sub": "claude --bg",
+          "itens": [
+            {
+              "t": "--name dá nome"
+            },
+            {
+              "t": "← ou /background"
+            }
+          ],
+          "detalhe": "Você escreve <code>claude --bg</code> e o pedido entre aspas, com a flag (uma opção que começa com dois tracinhos, como <code>--bg</code>) antes do pedido. Com <code>--name</code> a sessão ganha um nome fácil de achar. Se você já está dentro de uma sessão, a seta <code>←</code> no prompt vazio ou o comando <code>/background</code> manda essa sessão para o segundo plano."
+        },
+        {
+          "icone": "chip",
+          "titulo": "Supervisor",
+          "sub": "segue rodando",
+          "itens": [
+            {
+              "t": "terminal fechado"
+            },
+            {
+              "t": "máquina ligada"
+            }
+          ],
+          "detalhe": "Cada sessão roda dentro de um processo supervisor, um programa que fica cuidando delas por baixo. Por isso dá para fechar a janela e o terminal: o trabalho continua, desde que o computador esteja ligado."
+        },
+        {
+          "icone": "lista",
+          "titulo": "Agent view",
+          "sub": "claude agents",
+          "forte": true,
+          "itens": [
+            {
+              "t": "Needs input",
+              "sub": "precisa de você"
+            },
+            {
+              "t": "Working",
+              "sub": "trabalhando"
+            },
+            {
+              "t": "Ready for review",
+              "sub": "para revisar"
+            },
+            {
+              "t": "Completed",
+              "sub": "terminadas"
+            }
+          ],
+          "detalhe": "Uma tela com todas as sessões em segundo plano, separadas em grupos. As que precisam de você ficam no topo. Há também o grupo Pinned, com as que você fixou. O terminal avisa quando uma sessão precisa de você, termina ou falha."
+        },
+        {
+          "icone": "usuario",
+          "titulo": "Você age",
+          "sub": "entra ou para",
+          "itens": [
+            {
+              "t": "attach",
+              "sub": "entrar"
+            },
+            {
+              "t": "logs",
+              "sub": "espiar"
+            },
+            {
+              "t": "stop",
+              "sub": "parar"
+            }
+          ],
+          "detalhe": "Enter numa linha abre a sessão (attach) e mostra um resumo do que aconteceu enquanto você estava fora. <code>←</code> no prompt vazio ou <code>/exit</code> volta para a lista. Pelo terminal: <code>claude logs</code> mostra a saída recente sem entrar, e <code>claude stop</code> para a sessão."
+        }
+      ],
+      "legenda": "Você dispara, o supervisor segura, a agent view mostra e você só entra onde é preciso.",
+      "rolagem": true,
+      "rolagem_fim": {
+        "titulo": "De uma conversa para várias",
+        "texto": "Várias sessões trabalhando ao mesmo tempo e uma tela que diz qual precisa de você. É o primeiro passo para gerir, em vez de acompanhar cada resposta."
+      }
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Na prática, com a agência da Ana",
+      "sub": "Ana tem uma agência pequena com três clientes: uma padaria, uma clínica e uma loja de roupas.",
+      "passos": [
+        {
+          "titulo": "Despachar",
+          "sub": "uma linha por tarefa",
+          "texto": [
+            "Despachar é mandar uma tarefa para uma sessão em segundo plano. Uma sessão é uma conversa do Claude com o seu próprio histórico.",
+            "Segunda de manhã, a Ana abre o terminal na pasta da padaria e manda um <code>claude --bg</code> pedindo o relatório semanal. Na pasta da clínica, outro pedindo os posts da semana. Em dez segundos as duas estão trabalhando e o terminal está livre."
+          ],
+          "exemplo": {
+            "rot": "Dê nome",
+            "texto": "Com --name padaria-relatorio a Ana acha a sessão pelo nome, e não por um código como 7c5dcf5d."
+          }
+        },
+        {
+          "titulo": "Ler a tela",
+          "sub": "quem precisa de você",
+          "texto": [
+            "<code>claude agents</code> abre a agent view. Os grupos estão em inglês: <b>Needs input</b> (precisa de você), <b>Working</b> (trabalhando), <b>Ready for review</b> (pronto para revisar) e <b>Completed</b> (terminadas, falhas e paradas).",
+            "Ready for review é para quem programa: aparece quando a sessão abriu um PR (pull request, um pedido de revisão de código no GitHub) que espera revisão ou tem testes falhando. Quem não programa raramente vê esse grupo.",
+            "Na caixa de texto da tela dá para filtrar: <code>s:blocked</code> mostra tudo que espera você, <code>s:working</code> só as que estão rodando e <code>n:padaria</code> procura pelo nome."
+          ],
+          "exemplo": {
+            "rot": "Atalhos",
+            "texto": "Ctrl+T fixa uma sessão no topo (Pinned). Ctrl+S agrupa por pasta. claude agents --cwd [pasta] mostra só um projeto."
+          }
+        },
+        {
+          "titulo": "Entrar e voltar",
+          "sub": "attach e ←",
+          "texto": [
+            "A sessão dos posts da clínica está em Needs input porque pediu permissão: antes de rodar um comando ou mexer num arquivo, o Claude pergunta se pode. A Ana tecla Enter nela (attach), vê um resumo do que a sessão fez e a pergunta parada, e responde sim (ou não).",
+            "Ela responde e tecla <code>←</code> no prompt vazio para voltar à lista. A sessão segue trabalhando sozinha. Para só espiar, sem entrar, existe <code>claude logs</code>; para encerrar, <code>claude stop</code>."
+          ],
+          "exemplo": {
+            "rot": "Regra de bolso",
+            "texto": "Entre só onde a tela pede. O resto você olha no fim, já pronto."
+          }
+        },
+        {
+          "titulo": "Os limites",
+          "sub": "o que saber antes",
+          "texto": [
+            "A agent view é uma prévia de pesquisa (research preview) desde maio de 2026: pode mudar. As sessões rodam no seu computador, então ele precisa ficar ligado. <code>--bg</code> não combina com <code>-p</code>, o modo \"imprime e sai\" do Claude Code: uma pergunta, uma resposta, sem conversa.",
+            "Subagentes (ajudantes que uma sessão cria por dentro para uma parte do trabalho) e colegas de time não aparecem como linhas separadas. Sem terminal, no app Desktop (aba Code): + New ou Ctrl+N abre outra sessão, Ctrl+Tab troca entre elas, e o sistema avisa quando uma termina."
+          ],
+          "exemplo": {
+            "rot": "Confira a sua versão",
+            "texto": "Rode claude --version. Este curso conferiu os comandos na versão 2.1.312."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Os comandos do segundo plano",
+      "sub": "Troque o texto entre < > pelo seu. A flag --bg vem antes do pedido. Os dois pedidos só leem: funcionam em qualquer pasta e não mudam nada.",
+      "blocos": [
+        {
+          "rot": "Terminal · despachar duas sessões leves",
+          "icone": "terminal",
+          "conteudo": "# cd = entrar numa pasta. Troque o caminho pelo de uma pasta sua.\n# Para achar o caminho: arraste a pasta para a janela do terminal e ele aparece escrito.\n# No Windows, também dá para clicar na barra de endereço do Explorador e copiar.\ncd <caminho-da-pasta>\nclaude --bg --name o-que-tem-aqui \"Liste os arquivos desta pasta e diga em 3 linhas o que tem aqui. Só leia, não altere nada.\"\nclaude --bg --name contar-arquivos \"Diga quantos arquivos há nesta pasta e quais são os 3 maiores. Só leia, não altere nada.\""
+        },
+        {
+          "rot": "Terminal · acompanhar, entrar, espiar e parar",
+          "icone": "lista",
+          "conteudo": "claude agents            # abre a agent view\nclaude agents --json     # o mesmo estado em JSON (texto organizado em campos, que programas leem)\nclaude attach <id>       # entra na sessão\nclaude logs <id>         # mostra a saída recente sem entrar\nclaude stop <id>         # para a sessão"
+        },
+        {
+          "rot": "Na caixa da agent view · filtros",
+          "icone": "lupa",
+          "conteudo": "s:blocked\ns:working\nn:contar"
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "Ao despachar",
+            "html": "<pre>backgrounded · 7c5dcf5d · o-que-tem-aqui\n  claude agents            lista as sessões\n  claude attach 7c5dcf5d   abre no terminal\n  claude logs 7c5dcf5d     saída recente\n  claude stop 7c5dcf5d     para a sessão</pre>"
+          },
+          {
+            "rot": "A agent view",
+            "html": "<pre>Needs input (1)\n  contar-arquivos  pede permissão para listar a pasta\nWorking (1)\n  o-que-tem-aqui   lendo os arquivos da pasta\nCompleted (0)</pre><p>Needs input por permissão: o Claude pergunta antes de rodar um comando ou mexer num arquivo. Entre na sessão (Enter) e responda sim para ela seguir.</p>"
+          },
+          {
+            "rot": "Teclas na tela",
+            "html": "<ul><li><b>Enter</b> ou <b>→</b>: entra na sessão (attach) e mostra o resumo do que ela fez.</li><li><b>←</b> no prompt vazio ou <code>/exit</code>: volta para a lista.</li><li><b>Ctrl+T</b>: fixa no topo. <b>Ctrl+S</b>: agrupa por pasta.</li><li><code>/model</code>, <code>/effort</code> e <code>/fast</code> digitados na caixa valem para as próximas sessões despachadas.</li></ul>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "simfila",
+      "titulo": "Veja várias sessões passando pela tela",
+      "sub": "As quatro tarefas da semana da Ana. Despache, desligue o computador no meio e despache de novo.",
+      "tarefas": [
+        "Relatório semanal da padaria",
+        "Posts da semana da clínica",
+        "Planilha de preços da loja",
+        "Coluna nova na planilha da loja"
+      ],
+      "falha": 1,
+      "rot": {
+        "entrada": "Despachadas",
+        "rodando": "Working",
+        "feito": "Completed · ok",
+        "falhou": "Completed · falhou",
+        "rodar": "Despachar",
+        "parar": "Desligar o computador",
+        "zerar": "Recomeçar"
+      },
+      "msg": {
+        "inicio": "4 tarefas prontas para despachar. Clique em \"Despachar\".",
+        "rodando": "Trabalhando. Aqui elas andam uma por vez, para dar para acompanhar; de verdade, várias sessões rodam ao mesmo tempo.",
+        "parou": "Computador desligado: a sessão que estava no meio parou. Sessão local só trabalha com a máquina ligada.",
+        "retoma": "Na simulação, a tarefa interrompida volta para a lista. Na vida real, você confere com claude logs e despacha de novo o que faltou; o que já estava em Completed não precisa refazer.",
+        "fim": "Tudo em Completed. Hora de revisar as entregas.",
+        "fimfalha": "Uma sessão terminou com falha. Na agent view ela também fica em Completed, que junta terminadas, falhas e paradas. Abra com claude logs para ver o motivo e despache de novo."
+      },
+      "legenda": "Simulação ilustrativa no navegador: nada roda de verdade. As duas últimas colunas são o mesmo grupo Completed, separado aqui só para mostrar a falha, que é proposital. Uma sessão que espera uma resposta sua iria para Needs input, no topo."
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Prática: duas sessões em segundo plano",
+      "sub": "Use tarefas só de leitura. Assim nada muda nos seus arquivos.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "E1 · Despachar duas",
+          "min": "10 min",
+          "texto": "Abra o terminal. Entre numa pasta sua com cd (o comentário do bloco mostra como achar o caminho) e rode as duas linhas com --bg e --name do primeiro bloco. Depois rode claude agents --json, que mostra o estado em JSON: texto organizado em campos, que programas leem.",
+          "pronto": "a saída do claude agents --json cita os dois nomes que você deu (o-que-tem-aqui e contar-arquivos)."
+        },
+        {
+          "id": "e2",
+          "titulo": "E2 · Entrar e voltar",
+          "min": "5 min",
+          "texto": "Abra claude agents, tecle Enter numa das sessões, leia o resumo do que ela fez e volte com ← no prompt vazio.",
+          "pronto": "você está de volta na agent view e a sessão em que entrou continua listada."
+        },
+        {
+          "id": "e3",
+          "titulo": "E3 · Sem terminal (app Desktop)",
+          "min": "10 min",
+          "texto": "Na aba Code do app Desktop, abra duas sessões com + New (Ctrl+N), mande um dos pedidos acima em cada uma e troque entre elas com Ctrl+Tab enquanto trabalham.",
+          "pronto": "as duas sessões responderam e você recebeu o aviso do sistema quando uma terminou."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Teste o que aprendeu",
+      "sub": "A explicação aparece depois da sua resposta.",
+      "perguntas": [
+        {
+          "p": "Você quer que o Claude resuma um relatório enquanto você faz outra coisa. Qual comando?",
+          "opcoes": [
+            "claude -p --bg \"Resuma o relatório\"",
+            "claude --bg \"Resuma o relatório\"",
+            "claude agents \"Resuma o relatório\"",
+            "claude attach \"Resuma o relatório\""
+          ],
+          "certa": 1,
+          "explica": "--bg vem antes do pedido e inicia a sessão em segundo plano. Não combina com -p, o modo \"imprime e sai\". claude agents só lista as sessões e claude attach entra numa que já existe.",
+          "ref": "codigo"
+        },
+        {
+          "p": "Na agent view, em que grupo aparece a sessão que está esperando você responder?",
+          "opcoes": [
+            "Working",
+            "Completed",
+            "Pinned",
+            "Needs input"
+          ],
+          "certa": 3,
+          "explica": "Needs input quer dizer precisa de você, e fica no topo. Working está rodando, Completed terminou (ou falhou, ou foi parada) e Pinned é o que você fixou.",
+          "ref": "diagrama"
+        },
+        {
+          "p": "Você fechou o terminal com duas sessões em segundo plano. O que acontece?",
+          "opcoes": [
+            "As duas param na hora e o trabalho se perde.",
+            "Ficam pausadas até você abrir claude agents.",
+            "Continuam rodando, com o computador ligado.",
+            "Sobem para a nuvem e rodam sem o computador."
+          ],
+          "certa": 2,
+          "explica": "O supervisor segura as sessões depois que o terminal fecha. Mas elas são locais: o computador precisa estar ligado. Rodar sem o computador é coisa da nuvem (aula 5).",
+          "ref": "diagrama"
+        },
+        {
+          "p": "Como ver só as sessões que estão esperando por você?",
+          "opcoes": [
+            "Digitar s:blocked na caixa da agent view.",
+            "Rodar claude logs em cada sessão, uma a uma.",
+            "Abrir as sessões em split view no Desktop.",
+            "Rodar /recap dentro de cada sessão aberta."
+          ],
+          "certa": 0,
+          "explica": "O filtro s:blocked junta tudo que espera você. Abrir uma a uma funciona, mas é justamente o trabalho que a agent view tira das suas mãos.",
+          "ref": "passos"
+        },
+        {
+          "p": "Uma sessão em segundo plano criou três subagentes por dentro. Quantas linhas novas aparecem na agent view?",
+          "opcoes": [
+            "Três, uma por subagente.",
+            "Nenhuma além da própria sessão.",
+            "Quatro: a sessão e os subagentes.",
+            "Depende do plano da sua conta."
+          ],
+          "certa": 1,
+          "explica": "Subagentes e colegas de time que uma sessão cria não viram linhas separadas. Você vê a sessão; o que ela faz por dentro aparece quando você entra nela.",
+          "ref": "passos"
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "A aula em três frases",
+      "itens": [
+        {
+          "t": "Despachar",
+          "texto": "claude --bg com --name manda a tarefa para o segundo plano e libera você."
+        },
+        {
+          "t": "Ver",
+          "texto": "claude agents mostra todas as sessões; as que precisam de você ficam no topo."
+        },
+        {
+          "t": "Agir só onde precisa",
+          "texto": "Enter entra, ← volta, logs espia, stop para. Com a máquina ligada, o resto anda sozinho."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para ir além",
+      "links": [
+        {
+          "t": "Agent view: documentação oficial (em inglês)",
+          "href": "https://code.claude.com/docs/en/agent-view",
+          "icone": "lista"
+        },
+        {
+          "t": "App Desktop: várias sessões e split view (em inglês)",
+          "href": "https://code.claude.com/docs/en/desktop",
+          "icone": "terminal"
+        }
+      ]
+    }
+  ]
+}

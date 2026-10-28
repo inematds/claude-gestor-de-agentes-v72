@@ -1,0 +1,371 @@
+{
+  "slug": "artifacts",
+  "num": 6,
+  "menu": "Artifacts",
+  "titulo": "Artifacts: o resultado vira algo que outra pessoa usa",
+  "titulo_curto": "Do resultado ao link",
+  "minutos": 14,
+  "lead": "Uma conversa boa termina num texto que só você lê. Um artifact termina numa página: um documento, uma apresentação, um design ou um painel que abre num link. No claude.ai, ele nasce privado, você decide com quem compartilhar, e ele pode até responder perguntas de quem abre. É assim que o trabalho das suas sessões chega ao cliente e à equipe.",
+  "objetivo": "transformar o resultado de uma conversa em documento, apresentação, design ou painel que outra pessoa usa.",
+  "competencias": [
+    "escolher-tipo-de-artifact",
+    "pedir-um-artifact",
+    "compartilhar-com-cuidado"
+  ],
+  "aprende": [
+    {
+      "icone": "chat",
+      "t": "O que é um artifact e de onde ele sai"
+    },
+    {
+      "icone": "camadas",
+      "t": "Qual tipo escolher: documento, apresentação, design ou painel"
+    },
+    {
+      "icone": "compartilhar",
+      "t": "Compartilhar por link sem abrir demais"
+    },
+    {
+      "icone": "grafico",
+      "t": "Montar um painel de status das suas tarefas"
+    }
+  ],
+  "hero_alt": "Um homem aponta para um painel com gráficos numa tela grande, ao lado de um robô humanoide, segurando um tablet.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "Da conversa ao link",
+      "sub": "Toque ou clique em cada etapa.",
+      "rolagem": true,
+      "nos": [
+        {
+          "icone": "chat",
+          "titulo": "Conversa",
+          "sub": "o resultado",
+          "itens": [
+            {
+              "t": "texto, números"
+            },
+            {
+              "t": "status"
+            }
+          ],
+          "detalhe": "Tudo começa numa conversa no claude.ai: um relatório, os números do mês, o status das tarefas. Enquanto fica só na conversa, o resultado serve para você. Para servir a outra pessoa, ele precisa sair dali."
+        },
+        {
+          "icone": "camadas",
+          "titulo": "Artifact",
+          "sub": "uma página",
+          "forte": true,
+          "itens": [
+            {
+              "t": "Docs"
+            },
+            {
+              "t": "Slides"
+            },
+            {
+              "t": "Design"
+            },
+            {
+              "t": "painel (beta)"
+            }
+          ],
+          "detalhe": "Artifact é uma página que o Claude monta a partir da conversa e que abre fora dela. Documentos (Docs), apresentações (Slides) e designs (Design) já saíram do beta. Painéis (dashboards) e Motion, um vídeo animado feito em código que exporta MP4, ainda estão em beta."
+        },
+        {
+          "icone": "compartilhar",
+          "titulo": "Link",
+          "sub": "privado primeiro",
+          "itens": [
+            {
+              "t": "botão Share"
+            },
+            {
+              "t": "você decide"
+            }
+          ],
+          "detalhe": "O artifact nasce privado: só você vê. Para mostrar a alguém, você usa o botão Share e escolhe o acesso. Artifact que usa o Claude ou conecta seus apps não pode ficar aberto para qualquer um com o link. O passo a passo está logo abaixo."
+        },
+        {
+          "icone": "cerebro",
+          "titulo": "IA dentro",
+          "sub": "perguntas",
+          "itens": [
+            {
+              "t": "linguagem natural"
+            }
+          ],
+          "detalhe": "Um artifact pode ter IA embutida: quem abre faz perguntas em linguagem natural dentro da própria página. Num painel de status, a dona da padaria pergunta \"o que está atrasado?\" e não precisa ler tudo."
+        }
+      ],
+      "legenda": "A conversa produz, o artifact entrega, o link decide quem vê.",
+      "rolagem_fim": {
+        "titulo": "O resultado sai da conversa",
+        "texto": "Conversa vira página, página vira link, e o link é seu até você decidir abrir para alguém. As suas sessões produzem; o artifact mostra."
+      }
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Qual tipo escolher",
+      "sub": "Exemplo contínuo: a Ana tem uma agência com 3 clientes (padaria, clínica e loja de roupas).",
+      "passos": [
+        {
+          "titulo": "Documento",
+          "sub": "Docs",
+          "texto": [
+            "Para texto que alguém vai ler e passar adiante: relatório, proposta, ata, manual.",
+            "Pergunte a si mesmo: a pessoa vai ler com calma, no tempo dela? Então é documento."
+          ],
+          "exemplo": {
+            "rot": "Na agência da Ana",
+            "texto": "O relatório semanal da padaria, com as vendas e as recomendações da semana."
+          }
+        },
+        {
+          "titulo": "Apresentação",
+          "sub": "Slides",
+          "texto": [
+            "Para mostrar em reunião, uma ideia por tela.",
+            "Se você vai falar por cima e a pessoa vai olhar enquanto você fala, é apresentação."
+          ],
+          "exemplo": {
+            "rot": "Na agência da Ana",
+            "texto": "Seis telas com o resultado do mês para a reunião com a dona da padaria."
+          }
+        },
+        {
+          "titulo": "Design",
+          "sub": "peça visual",
+          "texto": [
+            "Para uma peça que se olha mais do que se lê: um post, um cartaz, uma capa.",
+            "O texto é curto e o visual manda."
+          ],
+          "exemplo": {
+            "rot": "Na agência da Ana",
+            "texto": "A capa do relatório da padaria e uma arte para os posts da semana da clínica."
+          }
+        },
+        {
+          "titulo": "Painel e Motion",
+          "sub": "em beta",
+          "texto": [
+            "Painel (dashboard) é para acompanhar: números e status que mudam e que alguém consulta toda semana. Motion é um vídeo animado feito em código, que exporta MP4.",
+            "Os dois ainda estão em beta: podem não aparecer para você ou mudar. Se o painel não estiver disponível, peça o mesmo conteúdo como documento."
+          ],
+          "exemplo": {
+            "rot": "Na agência da Ana",
+            "texto": "Um painel com o status das 3 tarefas (relatório da padaria, posts da clínica, planilha de preços da loja), que a equipe abre toda segunda."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Onde compartilhar",
+      "sub": "No claude.ai, com o artifact aberto.",
+      "passos": [
+        {
+          "titulo": "Botão Share",
+          "sub": "no artifact",
+          "texto": [
+            "Abra o artifact e clique no botão Share.",
+            "Artifacts antigos mostram Publish no lugar (planos Free, Pro e Max): ele gera um link público para copiar."
+          ],
+          "exemplo": {
+            "rot": "Na agência da Ana",
+            "texto": "Ela abre o painel de status das 3 tarefas e clica em Share."
+          }
+        },
+        {
+          "titulo": "Escolher o acesso",
+          "sub": "quem vê",
+          "texto": [
+            "Nos planos Pro e Max: Only you (só você) ou Anyone with the link (qualquer pessoa com o link), e dá para convidar por e-mail. Nos planos Team e Enterprise: só convidados ou toda a organização; o link aberto só aparece se o Owner (o dono da conta da empresa) liberar.",
+            "Quem precisa de conta: no Share, quem abre entra com uma conta Claude. No Publish dos artifacts antigos, qualquer pessoa com o link abre e usa sem conta; o cadastro só é pedido para recursos que usam o Claude."
+          ],
+          "exemplo": {
+            "rot": "Na agência da Ana",
+            "texto": "O painel é para a equipe: ela convida as duas pessoas por e-mail em vez de abrir para qualquer um."
+          }
+        },
+        {
+          "titulo": "O limite",
+          "sub": "Claude ou apps",
+          "texto": [
+            "Se o artifact usa o Claude (a IA embutida) ou conecta seus apps, ele não pode usar Anyone with the link.",
+            "Nesse caso, compartilhe por convite."
+          ],
+          "exemplo": {
+            "rot": "Por que importa",
+            "texto": "O painel com caixa de perguntas usa o Claude: vai por convite, nunca por link aberto."
+          }
+        },
+        {
+          "titulo": "Copiar o link",
+          "sub": "e conferir",
+          "texto": [
+            "Copie o link e mande para quem você escolheu.",
+            "Peça que a pessoa abra e confirme que viu. Só depois dê o compartilhamento como feito."
+          ],
+          "exemplo": {
+            "rot": "Para levar",
+            "texto": "Privado primeiro, acesso escolhido de propósito, link conferido por quem recebe."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Modelo: pedir o painel de status",
+      "sub": "Cole numa conversa no claude.ai. Troque o texto entre < > pelos 3 trabalhos que você listou na aula 1.",
+      "blocos": [
+        {
+          "rot": "Pedido do painel",
+          "icone": "grafico",
+          "conteudo": "Crie um artifact do tipo painel (dashboard) com o status de 3 trabalhos meus.\nPara cada um, mostre: nome, situação (concluído / em andamento / bloqueado / precisa de mim), próximo passo e prazo.\n\n1. <trabalho 1> | <situação> | <próximo passo> | <prazo>\n2. <trabalho 2> | <situação> | <próximo passo> | <prazo>\n3. <trabalho 3> | <situação> | <próximo passo> | <prazo>\n\nNo topo, uma linha com o que precisa de mim hoje.\nSe der, inclua uma caixa para perguntar sobre o status em linguagem natural."
+        },
+        {
+          "rot": "Plano B: se o painel não aparecer",
+          "icone": "arquivo",
+          "conteudo": "Crie um artifact do tipo documento com a mesma tabela de status dos 3 trabalhos acima.\nNo topo, uma linha com o que precisa de mim hoje."
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "O painel da Ana",
+            "html": "<p><b>Precisa de você hoje:</b> aprovar os posts da semana da clínica.</p><ul><li><b>Relatório semanal da padaria</b> · concluído · próximo: enviar à padaria · segunda</li><li><b>Posts da semana da clínica</b> · precisa de você · próximo: aprovar os posts · hoje</li><li><b>Planilha de preços da loja de roupas</b> · em andamento · próximo: coluna com preços dos concorrentes · quinta</li></ul>"
+          },
+          {
+            "rot": "Uma pergunta ao painel",
+            "html": "<p><b>Pergunta:</b> o que está atrasado?</p><p><b>Resposta:</b> nada atrasado. Os posts da clínica vencem hoje e esperam a sua aprovação.</p>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Prática: o seu painel de status",
+      "sub": "Feita no claude.ai, sem terminal. Use os 3 trabalhos do inventário da aula 1.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "E1 · O painel",
+          "min": "15 min",
+          "texto": "Abra uma conversa no claude.ai, cole o pedido do modelo com os seus 3 trabalhos e peça o painel. Se o tipo painel não estiver disponível para você (está em beta), use o plano B e peça um documento.",
+          "pronto": "o artifact abre num link próprio e mostra os 3 trabalhos, cada um com situação, próximo passo e prazo."
+        },
+        {
+          "id": "e2",
+          "titulo": "E2 · Quem pode ver",
+          "min": "5 min",
+          "texto": "Decida quem vê o painel: só você, a sua equipe ou o cliente (a padaria, a clínica ou a loja). Escreva essa decisão numa linha, no formato \"Quem vê: [quem] · Por quê: [motivo]\". Depois clique em Share e escolha o acesso (Only you, convite por e-mail ou Anyone with the link). Se o painel tem caixa de perguntas, ele usa o Claude: vai por convite. Se compartilhar, peça que a pessoa abra.",
+          "pronto": "você tem a linha \"Quem vê: … · Por quê: …\" escrita, o acesso escolhido no Share bate com ela e, se compartilhou, a pessoa confirmou que abriu."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Teste o que aprendeu",
+      "sub": "A explicação aparece depois da sua resposta.",
+      "perguntas": [
+        {
+          "p": "Você terminou o painel e quer que a equipe veja. Qual é o caminho?",
+          "opcoes": [
+            "Nada: o painel já fica público quando o Claude termina.",
+            "Botão Share e escolher o acesso; depois copiar o link.",
+            "Baixar o painel e mandar o arquivo por e-mail.",
+            "Pedir ao Claude que publique o painel nas redes."
+          ],
+          "certa": 1,
+          "explica": "O artifact nasce privado; o botão Share (Publish nos antigos) é onde você escolhe quem vê e copia o link. O erro comum é achar que terminar já publica, ou abrir para qualquer um com o link um painel que usa o Claude, o que não é permitido.",
+          "ref": "passos"
+        },
+        {
+          "p": "A Ana compartilhou um painel novo pelo botão Share com a dona da padaria. O que a dona precisa para abrir?",
+          "opcoes": [
+            "Nada: todo link de artifact abre sem login.",
+            "O Claude Code instalado no computador dela.",
+            "Entrar com uma conta Claude.",
+            "Uma senha que o Claude manda junto com o link."
+          ],
+          "certa": 2,
+          "explica": "No Share, quem abre entra com uma conta Claude. O erro comum é confundir com o Publish dos artifacts antigos, em que qualquer pessoa com o link abre sem conta, e prometer um link \"que abre direto\".",
+          "ref": "passos"
+        },
+        {
+          "p": "Quais tipos de artifact ainda estão em beta?",
+          "opcoes": [
+            "Documentos e apresentações.",
+            "Designs e documentos.",
+            "Só as apresentações.",
+            "Painéis e Motion."
+          ],
+          "certa": 3,
+          "explica": "Docs, Slides e Design já saíram do beta; painéis (dashboards) e Motion ainda estão nele. Por isso a prática tem plano B: se o painel não aparecer, peça um documento.",
+          "ref": "passos"
+        },
+        {
+          "p": "A Ana vai mostrar à dona da padaria, numa reunião, o resultado do mês em 6 telas. Qual tipo serve melhor?",
+          "opcoes": [
+            "Apresentação (Slides).",
+            "Motion, porque tem animação.",
+            "Um documento longo em texto.",
+            "Um painel com IA embutida."
+          ],
+          "certa": 0,
+          "explica": "Reunião com uma ideia por tela pede apresentação. O erro comum é escolher pelo recurso mais novo (painel, Motion) em vez de pelo uso: quem vai olhar, quando e como.",
+          "ref": "passos"
+        },
+        {
+          "p": "O que é a IA embutida num artifact?",
+          "opcoes": [
+            "Um robô que publica o artifact sozinho na internet.",
+            "Perguntas em linguagem natural feitas dentro da própria página.",
+            "Um modelo que escreve mensagens no lugar da dona da padaria.",
+            "Um mod que muda as cores do painel."
+          ],
+          "certa": 1,
+          "explica": "Quem abre a página pergunta em linguagem natural e recebe a resposta ali mesmo, sem ler tudo. O erro comum é confundir com automação: a IA embutida responde, não publica nem envia nada.",
+          "ref": "codigo"
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "A aula em três frases",
+      "itens": [
+        {
+          "t": "Da conversa à página",
+          "texto": "Artifact é o resultado da conversa numa página que outra pessoa usa."
+        },
+        {
+          "t": "O tipo pelo uso",
+          "texto": "Ler: documento. Reunião: apresentação. Olhar: design. Acompanhar: painel (em beta)."
+        },
+        {
+          "t": "Link com cuidado",
+          "texto": "Nasce privado; no Share você escolhe quem vê, e quem abre entra com conta Claude."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para ir além",
+      "links": [
+        {
+          "t": "O que são artifacts e como usar (central de ajuda, em inglês)",
+          "href": "https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them",
+          "icone": "lista"
+        },
+        {
+          "t": "Compartilhar artifacts (central de ajuda, em inglês)",
+          "href": "https://support.claude.com/en/articles/9547008-share-artifacts",
+          "icone": "compartilhar"
+        }
+      ]
+    }
+  ]
+}

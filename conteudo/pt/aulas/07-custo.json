@@ -1,0 +1,597 @@
+{
+  "slug": "custo",
+  "num": 7,
+  "menu": "Custo",
+  "titulo": "O painel de controle: custo e saúde das suas sessões",
+  "titulo_curto": "Custo e saúde",
+  "minutos": 20,
+  "lead": "Cada mensagem ao Claude gasta um pouco do limite do seu plano. Com várias sessões rodando, o gasto cresce rápido, e o contexto enche de coisa que nem é usada. Nesta aula você entende o que é custo aqui, aprende a medir com /usage e /context e monta um painel de controle simples para manter tudo leve e à vista.",
+  "objetivo": "medir e controlar o consumo do Claude com /usage, /context, /skill-doctor, /doctor, /advisor, /recap e a status line.",
+  "competencias": [
+    "medir-consumo",
+    "enxugar-contexto",
+    "diagnosticar-instalacao",
+    "acompanhar-consumo"
+  ],
+  "aprende": [
+    {
+      "icone": "grafico",
+      "t": "O que é custo aqui: tokens, contexto e limites do plano"
+    },
+    {
+      "icone": "memoria",
+      "t": "Medir com /usage e /context e enxugar as skills"
+    },
+    {
+      "icone": "escudo",
+      "t": "Diagnosticar a instalação e conferir mods sem susto"
+    },
+    {
+      "icone": "cerebro",
+      "t": "Quando chamar um modelo mais forte e deixar o consumo à vista"
+    }
+  ],
+  "hero_alt": "Um robô humanoide toca um painel na tela com barras de consumo e um medidor.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "Seis pontos do painel de controle",
+      "sub": "Toque ou clique em cada ponto.",
+      "nos": [
+        {
+          "icone": "grafico",
+          "titulo": "Medir",
+          "sub": "/usage",
+          "itens": [
+            {
+              "t": "/usage"
+            },
+            {
+              "t": "/context"
+            }
+          ],
+          "detalhe": "Antes de cortar, meça. O /usage mostra o custo da sessão, quanto do plano você já usou e estatísticas. O /context mostra uma grade colorida do que está ocupando o contexto. No app Desktop, o anel ao lado do seletor de modelo mostra o uso."
+        },
+        {
+          "icone": "memoria",
+          "titulo": "Contexto",
+          "sub": "/skill-doctor",
+          "itens": [
+            {
+              "t": "skills carregadas"
+            },
+            {
+              "t": "quais não usa"
+            }
+          ],
+          "detalhe": "Skill é uma pasta com um arquivo SKILL.md de instruções que o Claude pode usar. A lista com nome e descrição de todas as skills entra no contexto a cada mensagem, usadas ou não. O /skill-doctor mostra as que você não usa, quanto custam e onde desligar cada uma."
+        },
+        {
+          "icone": "escudo",
+          "titulo": "Configuração",
+          "sub": "/doctor",
+          "itens": [
+            {
+              "t": "instalação"
+            },
+            {
+              "t": "correções"
+            }
+          ],
+          "detalhe": "O /doctor diagnostica a instalação e a configuração. Dentro da sessão, ele propõe correções e espera você confirmar. No terminal, o claude doctor só lê e mostra o resultado."
+        },
+        {
+          "icone": "cerebro",
+          "titulo": "Decisões",
+          "sub": "/advisor",
+          "itens": [
+            {
+              "t": "modelo mais forte"
+            },
+            {
+              "t": "consome mais"
+            }
+          ],
+          "detalhe": "Fable, Opus e Sonnet são nomes de modelos do Claude: o Fable é o mais forte e o Sonnet o mais leve. O /advisor liga um desses modelos para o Claude consultar nos momentos-chave. É mais um modelo trabalhando, então consome mais. Use só onde há decisão grande."
+        },
+        {
+          "icone": "voltar",
+          "titulo": "Retomada",
+          "sub": "/recap",
+          "itens": [
+            {
+              "t": "resumo de uma linha"
+            }
+          ],
+          "detalhe": "O /recap devolve, na hora, um resumo de uma linha da sessão. Serve para voltar a uma sessão sem reler tudo e para conferir se ela ainda está no rumo."
+        },
+        {
+          "icone": "relogio",
+          "titulo": "Consumo",
+          "sub": "status line",
+          "forte": true,
+          "itens": [
+            {
+              "t": "/statusline"
+            },
+            {
+              "t": "mod"
+            }
+          ],
+          "detalhe": "A status line é a barra no rodapé do Claude Code. Ela pode mostrar a pasta, o modelo, o uso do contexto e os limites do plano em %. O jeito mais fácil de montar é o comando /statusline, dizendo o que você quer ver."
+        }
+      ],
+      "legenda": "Medir primeiro, depois enxugar, diagnosticar, reforçar só onde vale e deixar o consumo à vista.",
+      "rolagem": true,
+      "rolagem_fim": {
+        "titulo": "Painel montado",
+        "texto": "Consumo medido, contexto enxuto, instalação sadia, modelo forte só onde vale, retomada em uma linha e limites à vista: é isso que deixa várias sessões baratas de manter.",
+        "curto": "Painel montado"
+      }
+    },
+    {
+      "tipo": "passos",
+      "titulo": "O que é custo aqui",
+      "sub": "Quatro ideias para entender de onde vem o gasto. Sem fórmula, sem preço.",
+      "passos": [
+        {
+          "titulo": "Tokens",
+          "sub": "a moeda",
+          "texto": [
+            "Tokens são pedaços de texto. O modelo lê tokens (a sua mensagem e tudo o que vem junto) e escreve tokens (a resposta).",
+            "É assim que o uso é medido: quanto mais tokens, mais uso."
+          ],
+          "exemplo": {
+            "rot": "Na prática",
+            "texto": "Uma pergunta curta numa conversa nova gasta pouco. A mesma pergunta numa conversa longa gasta mais, porque o histórico vai junto."
+          }
+        },
+        {
+          "titulo": "Contexto",
+          "sub": "o que vai junto",
+          "texto": [
+            "Contexto é tudo o que a sessão carrega a cada mensagem: o histórico da conversa, os arquivos abertos e a lista de skills.",
+            "Quanto mais contexto, mais tokens por mensagem. Duas coisas ajudam sozinhas: o cache (o Claude guarda partes que se repetem para gastar menos) e a compactação automática (quando o contexto enche, ele resume o histórico). Mesmo assim, contexto inchado continua pesando."
+          ],
+          "exemplo": {
+            "rot": "Como ver",
+            "texto": "Digite /context na sessão: aparece uma grade colorida do que ocupa o contexto."
+          }
+        },
+        {
+          "titulo": "Limites do plano",
+          "sub": "Pro e Max",
+          "texto": [
+            "Nos planos Pro e Max, o uso vem incluído na assinatura, com limites de sessão e limites semanais. Os limites são compartilhados entre os modelos.",
+            "Quando passa do limite, o Claude avisa (\"You've hit your session limit\" ou \"weekly limit\") e você espera o limite voltar."
+          ],
+          "exemplo": {
+            "rot": "Como ver",
+            "texto": "Digite /usage: mostra o custo da sessão, quanto do plano já foi usado e estatísticas. Os apelidos /cost e /stats abrem o mesmo."
+          }
+        },
+        {
+          "titulo": "O que soma",
+          "sub": "várias sessões",
+          "texto": [
+            "Cada sessão, e cada teammate de um time, tem o próprio contexto. Então o consumo cresce com o número de sessões ativas ao mesmo tempo.",
+            "O advisor também soma: é um modelo mais forte sendo consultado além do principal."
+          ],
+          "exemplo": {
+            "rot": "Para a Ana",
+            "texto": "Três clientes, três sessões, cada uma com o seu histórico: o gasto é de três conversas, não de uma."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "passos",
+      "titulo": "O painel na agência da Ana",
+      "sub": "Ana tem uma agência com 3 clientes. A padaria recebe um relatório semanal, a clínica recebe os posts da semana e a loja de roupas tem uma planilha de preços. Cada cliente tem a sua sessão.",
+      "passos": [
+        {
+          "titulo": "Enxugar",
+          "sub": "/skill-doctor",
+          "texto": [
+            "Ana roda /skill-doctor na sessão da padaria, a do relatório semanal. O relatório abre na aba Stats do /plugin, o menu onde você ativa e desativa plugins (pacotes de extensões do Claude Code). Ele mostra duas skills que ela instalou, testou uma vez e nunca mais usou, e diz onde desligar cada uma.",
+            "Skill pessoal fica em ~/.claude/skills/[nome]/ e skill do projeto em .claude/skills/[nome]/: para desligar, apague ou mova a pasta. Skill que veio num plugin se desativa pelo /plugin. Skill que veio do claude.ai se desliga na sua conta."
+          ],
+          "exemplo": {
+            "rot": "Se o relatório vier vazio",
+            "texto": "Tudo bem: você não tem skill instalada. O /skill-doctor não lista as skills que já vêm com o Claude Code."
+          }
+        },
+        {
+          "titulo": "Diagnosticar",
+          "sub": "/doctor",
+          "texto": [
+            "Uma sessão começou a dar aviso estranho ao abrir. Antes de mexer em arquivo, Ana roda claude doctor no terminal: ele só lê e mostra o que achou.",
+            "Depois, dentro da sessão, roda /doctor. Ele propõe a correção e espera o OK dela. Nada muda sem confirmação."
+          ],
+          "exemplo": {
+            "rot": "Regra",
+            "texto": "Primeiro olhar (claude doctor), depois corrigir (/doctor), sempre com o seu OK."
+          }
+        },
+        {
+          "titulo": "Reforçar",
+          "sub": "/advisor",
+          "texto": [
+            "A planilha de preços da loja vai ganhar uma coluna nova, com uma regra de desconto por coleção. É uma decisão grande. Ana liga /advisor opus nessa sessão: o Claude passa a consultar o Opus, um modelo mais forte, nos momentos-chave.",
+            "Na sessão da clínica, que monta os posts da semana sempre no mesmo formato, o advisor fica desligado. Ali ele só gastaria mais."
+          ],
+          "exemplo": {
+            "rot": "Regra",
+            "texto": "Modelo forte onde há decisão grande; tarefa repetitiva fica sem advisor."
+          }
+        },
+        {
+          "titulo": "Enxergar",
+          "sub": "status line",
+          "texto": [
+            "Ana digita na sessão: /statusline mostre a pasta, o modelo e o uso do contexto e do limite de 5 horas em %. O Claude monta um pequeno script (um arquivo com comandos que o computador roda sozinho) e grava a configuração no arquivo ~/.claude/settings.json.",
+            "Por que 5 horas: o limite de sessão do plano funciona numa janela de 5 horas, e a status line oficial mostra em % o uso dessa janela (5h) e o da semana (7d). A partir daí, o rodapé mostra o consumo o tempo todo. No fim do dia, Ana usa /recap em cada sessão."
+          ],
+          "exemplo": {
+            "rot": "Para mudar",
+            "texto": "Quer ver outra coisa no rodapé? Rode /statusline de novo com outro pedido, por exemplo \"mostre também o uso da semana em %\"."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Mods sem susto",
+      "sub": "Um mod muda como o Claude Code aparece e se comporta. Antes de instalar um, entenda quatro palavras.",
+      "passos": [
+        {
+          "titulo": "Mod",
+          "sub": "o que é",
+          "texto": [
+            "Plugin é um pacote de extensões do Claude Code: pode trazer skills, comandos, hooks. Mod é um plugin que muda como o Claude Code aparece e se comporta: desenha uma faixa, a status line, um painel, um aviso ou um comando novo.",
+            "O /plugin, digitado na sessão, abre o menu dos plugins: é ali que você ativa, desativa ou desinstala. Exemplo de mods: o repositório inema-mods tem 18 mods em português, testados."
+          ]
+        },
+        {
+          "titulo": "Hook",
+          "sub": "roda sozinho",
+          "texto": [
+            "Hook é um comando que roda sozinho quando algo acontece no Claude Code: ao iniciar a sessão, antes de usar uma ferramenta e assim por diante.",
+            "Os mods usam hooks. Por isso um mod pode agir sem você pedir."
+          ]
+        },
+        {
+          "titulo": "Sandbox",
+          "sub": "não tem",
+          "texto": [
+            "Sandbox é uma área isolada, onde um programa roda sem acesso ao resto do computador. Mods não têm sandbox.",
+            "Ou seja: um mod roda com o mesmo acesso que o seu Claude Code. Por isso se confere antes."
+          ]
+        },
+        {
+          "titulo": "Conferir",
+          "sub": "validate",
+          "texto": [
+            "Antes de instalar, rode claude plugin validate apontando para a pasta do mod. Ele lista os eventos em que o mod roda (hooks:) e o que ele pede (calls:). Se algo parecer demais, não instale. Para instalar, siga o README do mod.",
+            "Se um mod der problema, claude --safe-mode abre o Claude Code sem nenhuma customização, e você desativa o mod no /plugin com calma."
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Onde ficam as skills (e como mover sem terminal)",
+      "sub": "Antes de desligar, ache a pasta. Três coisas que confundem na primeira vez.",
+      "passos": [
+        {
+          "titulo": "O ~",
+          "sub": "sua pasta pessoal",
+          "texto": [
+            "O sinal ~ (til) é um atalho para a sua pasta pessoal, a pasta com o seu nome de usuário no computador.",
+            "Então ~/.claude/skills quer dizer: dentro da sua pasta pessoal, a pasta .claude, e dentro dela a pasta skills."
+          ],
+          "exemplo": {
+            "rot": "No Windows",
+            "texto": "O mesmo caminho é C:\\Users\\[você]\\.claude\\skills, trocando [você] pelo seu nome de usuário."
+          }
+        },
+        {
+          "titulo": "Pasta oculta",
+          "sub": "o ponto no nome",
+          "texto": [
+            "Pasta que começa com ponto, como .claude, fica escondida por padrão. Você precisa mandar o sistema mostrar.",
+            "No Mac, no Finder, aperte Cmd+Shift+. (ponto). No Windows, no Explorador de Arquivos, vá em Exibir e marque Itens ocultos."
+          ]
+        },
+        {
+          "titulo": "Sem terminal",
+          "sub": "arrastar a pasta",
+          "texto": [
+            "Com a pasta .claude visível, abra a pasta skills. Cada skill é uma pasta com o nome dela.",
+            "Para desligar, arraste a pasta da skill para outro lugar (por exemplo, uma pasta skills-desligadas na Área de Trabalho). Para ligar de novo, arraste de volta."
+          ],
+          "exemplo": {
+            "rot": "Pronto quando",
+            "texto": "A pasta da skill saiu de .claude/skills e, numa sessão nova, o /skill-doctor não mostra mais essa skill."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Os comandos do painel",
+      "sub": "Os que começam com / você digita dentro da sessão. Os que começam com claude você digita no terminal.",
+      "blocos": [
+        {
+          "rot": "Na sessão · quanto já gastei do plano",
+          "icone": "grafico",
+          "conteudo": "/usage"
+        },
+        {
+          "rot": "Na sessão · o que ocupa o contexto",
+          "icone": "memoria",
+          "conteudo": "/context"
+        },
+        {
+          "rot": "Na sessão · montar a status line",
+          "icone": "terminal",
+          "conteudo": "/statusline mostre a pasta, o modelo e o uso do contexto e do limite de 5 horas em %"
+        },
+        {
+          "rot": "Na sessão · quais skills pesam e onde desligar",
+          "icone": "lupa",
+          "conteudo": "/skill-doctor"
+        },
+        {
+          "rot": "No terminal (Mac/Linux) · desligar uma skill pessoal movendo a pasta",
+          "icone": "pasta",
+          "conteudo": "mkdir -p ~/skills-desligadas\nmv ~/.claude/skills/<nome-da-skill> ~/skills-desligadas/"
+        },
+        {
+          "rot": "No terminal · diagnóstico que só lê",
+          "icone": "terminal",
+          "conteudo": "claude doctor"
+        },
+        {
+          "rot": "Na sessão · diagnóstico que propõe correção",
+          "icone": "escudo",
+          "conteudo": "/doctor"
+        },
+        {
+          "rot": "Na sessão · ligar e desligar o advisor",
+          "icone": "cerebro",
+          "conteudo": "/advisor opus\n/advisor off"
+        },
+        {
+          "rot": "Na sessão · onde parei",
+          "icone": "voltar",
+          "conteudo": "/recap"
+        },
+        {
+          "rot": "No terminal · git clone baixa uma cópia do repositório; depois confira um mod antes de instalar",
+          "icone": "lupa",
+          "conteudo": "git clone https://github.com/inematds/inema-mods\nclaude plugin validate ./inema-mods/mods/<pasta-do-mod>"
+        },
+        {
+          "rot": "No terminal · abrir sem nenhuma customização",
+          "icone": "cadeado",
+          "conteudo": "claude --safe-mode"
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "/skill-doctor (exemplo)",
+            "html": "<pre>Skills que você instalou\n\n  posts-instagram     usada      contexto: baixo\n  conversor-pdf       não usada  contexto: médio   desligar: ~/.claude/skills/conversor-pdf/\n  apresentacao-slides não usada  contexto: alto    desligar: /plugin (plugin slides)</pre><p>O formato real pode mudar com a versão. O que importa: a coluna de uso, o peso no contexto e onde desligar. Relatório vazio = você não tem skill instalada.</p>"
+          },
+          {
+            "rot": "Status line (exemplo)",
+            "html": "<pre>~/agencia/padaria · Sonnet · contexto 32% · 5h 18% · 7d 9%</pre><p>5h = uso da janela de 5 horas do limite de sessão; 7d = uso da semana. O que aparece depende do que você pediu no /statusline.</p>"
+          },
+          {
+            "rot": "claude doctor (exemplo)",
+            "html": "<pre>Diagnóstico da instalação\n  versão ............ ok\n  configuração ...... ok\n  skills ............ 1 aviso: skill com arquivo ausente\n\nNada foi alterado. Para corrigir, rode /doctor dentro da sessão.</pre>"
+          },
+          {
+            "rot": "plugin validate (exemplo)",
+            "html": "<pre>hooks:\n  PreToolUse   (antes de usar uma ferramenta)\ncalls:\n  ler o comando que vai rodar</pre><p>Leia os eventos (hooks:) e o que o mod pede (calls:) antes de instalar. Anote em uma frase o que ele faz. Para instalar, siga o README do mod.</p>"
+          },
+          {
+            "rot": "Lista da Ana",
+            "html": "<ul><li><b>Manter:</b> posts-instagram (uso toda semana nos posts da clínica).</li><li><b>Desligar:</b> conversor-pdf (movi a pasta) e apresentacao-slides (desativei no /plugin).</li><li><b>Doctor:</b> claude doctor sem erro depois da correção.</li><li><b>Advisor:</b> opus só na sessão da planilha de preços da loja.</li><li><b>Retomada:</b> /recap em cada sessão às 18h.</li><li><b>Painel:</b> status line com pasta, modelo, contexto e uso de 5h e 7d.</li></ul>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "conferidor",
+      "titulo": "Confira a sua lista de controle",
+      "sub": "Cole a sua lista (ou carregue o .txt). A página confere os seis campos e pede no Advisor o modelo escolhido (fable, opus, sonnet) ou off. Se você não tem skill instalada, escreva isso no Desligar. O OK confere a forma; quem decide se a escolha é boa é você.",
+      "arquivo": "painel-controle.txt",
+      "rot": "Cole aqui a sua lista de controle (um campo por linha):",
+      "modelo": "Manter: ...\nDesligar: ...\nDoctor: ...\nAdvisor: ...\nRetomada: ...\nPainel: ...",
+      "regras": [
+        {
+          "tipo": "campos",
+          "campos": [
+            "Manter",
+            "Desligar",
+            "Doctor",
+            "Retomada",
+            "Painel"
+          ],
+          "min": 6
+        },
+        {
+          "tipo": "campos",
+          "campos": [
+            "Advisor"
+          ],
+          "min": 2
+        },
+        {
+          "tipo": "termos",
+          "grupos": [
+            {
+              "rot": "no Advisor o modelo (fable, opus, sonnet) ou off",
+              "campo": "Advisor",
+              "termos": [
+                "fable",
+                "opus",
+                "sonnet",
+                "off / desligado / desligar / apagado"
+              ]
+            }
+          ]
+        }
+      ],
+      "ok": "OK: lista de controle com os {n} campos preenchidos",
+      "exemplo": "Manter: posts-instagram, uso toda semana nos posts da clínica.\nDesligar: conversor-pdf (movi a pasta) e apresentacao-slides (desativei no /plugin).\nDoctor: claude doctor sem erro depois da correção.\nAdvisor: opus só na sessão da planilha de preços da loja.\nRetomada: /recap em cada sessão às 18h.\nPainel: status line com pasta, modelo, contexto e uso de 5h e 7d.",
+      "exemplo_errado": "Manter: todas.\nDesligar:\nDoctor: depois eu vejo.\nAdvisor: o melhor que tiver.\nRetomada: /recap no fim do dia.\nPainel: status line ligada."
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Prática: medir, enxugar e deixar à vista",
+      "sub": "Use uma sessão sua de verdade, de preferência a que você mais usa.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "E1 · Medir e enxugar",
+          "min": "10 min",
+          "texto": "No Claude Code, rode /usage e anote quanto do plano já usou. Rode /context e veja o que ocupa mais. Depois rode /skill-doctor e escolha uma skill para desligar pelo caminho indicado (pasta: mova com o gerenciador de arquivos). Relatório vazio = nenhuma skill instalada: anote isso no Desligar. Sem terminal: no app Desktop, olhe o anel de uso ao lado do seletor de modelo.",
+          "pronto": "você anotou o uso do plano e tem uma linha Manter e uma linha Desligar (com a skill escolhida ou \"nenhuma skill instalada\")."
+        },
+        {
+          "id": "e2",
+          "titulo": "E2 · A status line",
+          "min": "5 min",
+          "texto": "Na sessão, digite: /statusline mostre a pasta, o modelo e o uso do contexto e do limite de 5 horas em %. Confirme o que o Claude propuser.",
+          "pronto": "o rodapé do Claude Code mostra a pasta, o modelo e as duas porcentagens."
+        },
+        {
+          "id": "e3",
+          "titulo": "E3 · Diagnóstico",
+          "min": "5 min",
+          "texto": "No terminal, rode claude doctor. Se aparecer aviso, rode /doctor dentro da sessão e só confirme a correção que você entendeu.",
+          "pronto": "o claude doctor termina sem erro, ou você anotou o erro e o que o /doctor propôs."
+        },
+        {
+          "id": "e4",
+          "titulo": "E4 · A lista no conferidor",
+          "min": "10 min",
+          "texto": "Escreva o painel-controle.txt com os seis campos (Manter, Desligar, Doctor, Advisor, Retomada, Painel) e cole no conferidor acima.",
+          "pronto": "o conferidor responde \"OK: lista de controle com os 6 campos preenchidos\"."
+        },
+        {
+          "id": "e5",
+          "titulo": "E5 · Conferir um mod antes de instalar (opcional)",
+          "min": "10 min",
+          "texto": "Baixe os mods do inematds/inema-mods. Com git clone (o comando que baixa uma cópia do repositório para o seu computador, no bloco acima) ou, no GitHub, pelo botão Code → Download ZIP (descompacte). Escolha um mod da pasta mods e rode claude plugin validate apontando para a pasta dele. Leia as linhas hooks: e calls:. Não precisa instalar; se quiser, siga o README do mod.",
+          "pronto": "você anotou o nome do mod, os eventos de hooks:, o que ele pede em calls: e, em uma frase, o que ele faz."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Teste o que aprendeu",
+      "sub": "A explicação aparece depois da sua resposta.",
+      "perguntas": [
+        {
+          "p": "Por que três sessões abertas ao mesmo tempo gastam mais do que uma?",
+          "opcoes": [
+            "Porque o plano cobra uma taxa fixa extra por sessão aberta.",
+            "Porque cada sessão tem o próprio contexto, lido a cada mensagem.",
+            "Porque só a primeira sessão do dia usa a compactação automática.",
+            "Porque sessões paralelas usam sempre o modelo mais forte."
+          ],
+          "certa": 1,
+          "explica": "Cada sessão carrega o seu histórico, arquivos e skills, e isso vira tokens a cada mensagem. O gasto soma. Não há taxa fixa por sessão.",
+          "ref": "passos"
+        },
+        {
+          "p": "Qual comando mostra quanto do limite do plano você já usou?",
+          "opcoes": [
+            "/recap, que resume a sessão em uma linha só.",
+            "/doctor, que diagnostica a instalação inteira.",
+            "/usage, com o custo da sessão e o uso do plano.",
+            "/btw, que faz uma pergunta lateral rápida."
+          ],
+          "certa": 2,
+          "explica": "O /usage (ou /cost, /stats) mostra custo, uso do plano e estatísticas. O /context mostra o que ocupa o contexto.",
+          "ref": "codigo"
+        },
+        {
+          "p": "Ana tem uma sessão que só gera legendas de foto. O que fazer com o /advisor nela?",
+          "opcoes": [
+            "Deixar desligado: modelo forte é para decisões grandes.",
+            "Ligar com opus para que todas as legendas fiquem melhores.",
+            "Ligar com fable em todas as sessões da agência, por padrão.",
+            "Usar /recap no lugar do advisor para economizar contexto."
+          ],
+          "certa": 0,
+          "explica": "O advisor é mais um modelo, mais forte, sendo consultado: consome mais. Tarefa repetitiva não tem decisão grande. Ligar em tudo é o erro comum.",
+          "ref": "diagrama"
+        },
+        {
+          "p": "Antes de instalar um mod, o que fazer?",
+          "opcoes": [
+            "Nada: todo mod roda numa área isolada e não mexe nos seus arquivos.",
+            "Rodar /recap dentro da sessão para ver em uma linha o que ele faz.",
+            "Instalar direto e, se der qualquer problema, apagar a pasta do mod.",
+            "Rodar claude plugin validate e ler os eventos e o que ele pede."
+          ],
+          "certa": 3,
+          "explica": "Mods não têm sandbox. O validate lista os eventos (hooks:) e o que o mod pede (calls:). Se algo der errado, claude --safe-mode abre sem customizações.",
+          "ref": "codigo"
+        },
+        {
+          "p": "Você rodou /skill-doctor e o relatório veio vazio. O que isso quer dizer?",
+          "opcoes": [
+            "Que a instalação está quebrada e precisa do /doctor.",
+            "Que você não tem skill instalada, e está tudo bem.",
+            "Que as skills do Claude Code foram todas desligadas.",
+            "Que é preciso ligar o /advisor para ver o relatório."
+          ],
+          "certa": 1,
+          "explica": "O /skill-doctor não lista as skills que já vêm com o Claude Code. Relatório vazio = nada instalado por você. Anote isso e siga.",
+          "ref": "codigo"
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "A aula em três frases",
+      "itens": [
+        {
+          "t": "Custo é contexto",
+          "texto": "Tokens medem o uso; histórico, arquivos, skills, sessões paralelas e advisor somam. Meça com /usage e /context."
+        },
+        {
+          "t": "Enxugar com OK",
+          "texto": "/skill-doctor diz o que pesa e onde desligar; claude doctor lê, /doctor propõe e espera você."
+        },
+        {
+          "t": "Olho fixo",
+          "texto": "/statusline com o que você quer ver, /recap para retomar e mods só depois do plugin validate."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para ir além",
+      "links": [
+        {
+          "t": "Status line do Claude Code (documentação oficial, em inglês)",
+          "href": "https://code.claude.com/docs/en/statusline",
+          "icone": "lista"
+        },
+        {
+          "t": "inema-mods: 18 mods em português testados",
+          "href": "https://github.com/inematds/inema-mods",
+          "icone": "git"
+        }
+      ]
+    }
+  ]
+}

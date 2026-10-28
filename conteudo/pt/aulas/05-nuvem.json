@@ -1,0 +1,404 @@
+{
+  "slug": "nuvem",
+  "num": 5,
+  "menu": "Nuvem",
+  "titulo": "Local, segundo plano ou nuvem: onde cada trabalho roda",
+  "titulo_curto": "Onde cada trabalho roda",
+  "minutos": 16,
+  "lead": "Até aqui as sessões rodaram no seu computador. Agora existe um terceiro lugar: a nuvem, com os Projects do Claude Code, onde o trabalho anda mesmo com o notebook desligado. Cada lugar cobra um preço: máquina ligada de um lado, arquivos da empresa guardados fora de casa do outro. Nesta aula você decide onde cada trabalho roda e o que nunca entra numa sessão sem você decidir.",
+  "objetivo": "decidir o que roda no seu computador, no segundo plano e na nuvem (Projects), e o que nunca sobe.",
+  "competencias": [
+    "escolher-onde-roda",
+    "proteger-dados-da-empresa",
+    "escrever-instrucoes-do-projeto"
+  ],
+  "aprende": [
+    {
+      "icone": "terminal",
+      "t": "O que muda entre local, segundo plano e nuvem"
+    },
+    {
+      "icone": "nuvem",
+      "t": "Como funciona um projeto na nuvem (e quem já tem acesso)"
+    },
+    {
+      "icone": "cadeado",
+      "t": "O que nunca entra numa sessão sem você decidir"
+    },
+    {
+      "icone": "arquivo",
+      "t": "Escrever e conferir as instruções do seu projeto"
+    }
+  ],
+  "hero_alt": "Mesa escura com um notebook fechado; à esquerda, uma nuvem de luz branca ligada a ele; à direita, uma pasta com um cadeado.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "Três lugares para rodar, um que nunca sobe",
+      "sub": "Toque ou clique em cada lugar.",
+      "rolagem": true,
+      "nos": [
+        {
+          "icone": "terminal",
+          "titulo": "Local",
+          "sub": "seu computador",
+          "itens": [
+            {
+              "t": "arquivos em casa"
+            },
+            {
+              "t": "você junto"
+            }
+          ],
+          "detalhe": "É a sessão de sempre: o Claude Code no terminal ou a aba Code do app Desktop. Sessão é uma conversa do Claude com o próprio histórico. Os arquivos ficam no seu computador, com as suas skills (pastas de instruções prontas que o Claude usa, como na aula 1). Mas o modelo roda nos servidores da Anthropic: o que o Claude lê para responder vai para lá. Depende do computador ligado."
+        },
+        {
+          "icone": "relogio",
+          "titulo": "Segundo plano",
+          "sub": "supervisor",
+          "itens": [
+            {
+              "t": "mesmos arquivos"
+            },
+            {
+              "t": "máquina ligada"
+            }
+          ],
+          "detalhe": "É o <code>claude --bg</code> da aula 3. A sessão roda num processo supervisor: você fecha o terminal e o trabalho continua, e a agent view mostra tudo. Os arquivos e as skills são os mesmos da sessão local, e o que o Claude lê também vai para o modelo nos servidores da Anthropic. O limite é o mesmo: o computador precisa ficar ligado."
+        },
+        {
+          "icone": "nuvem",
+          "titulo": "Nuvem",
+          "sub": "Projects",
+          "forte": true,
+          "itens": [
+            {
+              "t": "sem o computador"
+            },
+            {
+              "t": "memória e Library"
+            },
+            {
+              "t": "arquivos guardados"
+            }
+          ],
+          "detalhe": "Um projeto é uma conversa contínua em que o Claude abre uma thread (uma linha de trabalho) por tarefa. Cada thread normalmente roda na nuvem, sem o seu computador. Na aba Library ficam arquivos e repositórios (repositório = pasta de um projeto com o histórico das versões, em geral no GitHub). A diferença para o local: aqui os arquivos ficam guardados na nuvem. Beta pública só no Pro e no Max, liberando aos poucos."
+        },
+        {
+          "icone": "cadeado",
+          "titulo": "Nunca entra",
+          "sub": "sem decidir",
+          "itens": [
+            {
+              "t": "contratos"
+            },
+            {
+              "t": "dado pessoal"
+            }
+          ],
+          "detalhe": "Opinião do curso, não regra do Claude. Em qualquer lugar, até no local, o que o Claude lê vai para o modelo. Decida antes o que pode entrar numa sessão: contrato, dado pessoal de funcionário ou de paciente, vendas de cliente. Para dado sensível, prefira o local: o arquivo fica no seu computador e só o trecho lido vai para o modelo; num projeto, ele fica guardado na nuvem."
+        }
+      ],
+      "legenda": "No local, os arquivos ficam com você e só o que o Claude lê vai para o modelo. Na nuvem, os arquivos ficam guardados lá e o trabalho roda sem você.",
+      "rolagem_fim": {
+        "titulo": "Cada trabalho no seu lugar",
+        "texto": "Precisa dos seus arquivos ou mexe com dado sensível? Local ou segundo plano, e o Claude lê só o necessário. Pode rodar sem você e sem dado sensível? Nuvem. O que você não quer que nenhum modelo leia não entra em sessão nenhuma."
+      }
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Um projeto na nuvem, por dentro",
+      "sub": "Exemplo contínuo: a Ana tem uma agência com 3 clientes (padaria, clínica e loja de roupas).",
+      "passos": [
+        {
+          "titulo": "Onde fica",
+          "sub": "beta Pro e Max",
+          "texto": [
+            "Os Projects estão em beta pública nos planos Pro e Max, liberando aos poucos. Ainda não chegaram aos planos Team e Enterprise.",
+            "Quem tem acesso encontra o recurso na barra lateral do claude.ai/code ou na aba Code do app Desktop (às vezes dentro de \"More\"). Quem não tem vê uma lista de espera.",
+            "Não apareceu? É normal: a liberação é gradual. Entre na lista de espera. A prática desta aula funciona sem acesso, e o arquivo que você escrever serve quando o recurso chegar."
+          ],
+          "exemplo": {
+            "rot": "Não confunda",
+            "texto": "Os Projects do Claude Code (claude.ai/code ou aba Code do app Desktop) não são os Projetos do chat do claude.ai, aquelas pastas de conversas com arquivos e instruções. São coisas diferentes, e esta aula fala só dos primeiros."
+          }
+        },
+        {
+          "titulo": "Uma conversa, várias threads",
+          "sub": "o Claude coordena",
+          "texto": [
+            "Um projeto é uma conversa só, que não acaba. Você conta o que precisa, e o Claude abre uma thread para cada tarefa.",
+            "Ao lado fica o Overview, um painel que acompanha as threads e mostra um ponto quando uma delas espera por você. O app Desktop avisa quando uma thread erra ou precisa de você."
+          ],
+          "exemplo": {
+            "rot": "Na agência da Ana",
+            "texto": "Projeto \"Preços da concorrência\": para a planilha de preços da loja de roupas, uma thread pesquisa os preços públicos de camisetas nas lojas concorrentes, outra os de calças. A Ana olha o Overview duas vezes por dia."
+          }
+        },
+        {
+          "titulo": "O contexto fixo",
+          "sub": "memória, instruções, Library",
+          "texto": [
+            "Três coisas valem para toda thread. A memória do projeto: notas que o próprio Claude grava, como requisitos, decisões e armadilhas. As instruções do projeto: o brief que toda thread nova recebe. E a aba Library, com arquivos e repositórios guardados na nuvem.",
+            "Projeto não precisa de repositório: as threads podem pesquisar, escrever documentos, rodar código num ambiente isolado na nuvem e entregar arquivos na Library."
+          ],
+          "exemplo": {
+            "rot": "Para levar",
+            "texto": "As instruções do projeto são a parte que você escreve. É o que você vai preparar na prática."
+          }
+        },
+        {
+          "titulo": "Rodar no seu computador",
+          "sub": "quando precisa",
+          "texto": [
+            "Uma thread pode rodar no seu computador em vez da nuvem: é o Work locally, também chamado Remote Control (no terminal, <code>claude remote-control</code>).",
+            "Aí ela enxerga o que está na sua máquina, mas volta a depender dela: o computador precisa estar ligado e acordado."
+          ],
+          "exemplo": {
+            "rot": "Quando usar",
+            "texto": "A thread precisa enxergar algo que está só na sua máquina. Atenção: o que ela lê vai para o modelo e o que ela responde fica no projeto na nuvem, então decida antes o que ela pode ler."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Modelos: a decisão e as instruções do projeto",
+      "sub": "Copie, troque o texto entre < > pelo seu e guarde como onde-roda.txt.",
+      "blocos": [
+        {
+          "rot": "onde-roda.txt · a tabela de decisão",
+          "icone": "lista",
+          "conteudo": "1 | <trabalho 1> | onde: <local, segundo plano ou nuvem> | sensível: <sim ou não>, <qual dado> | por que: <motivo>\n2 | <trabalho 2> | onde: <local, segundo plano ou nuvem> | sensível: <sim ou não>, <qual dado> | por que: <motivo>\n3 | <trabalho 3> | onde: <local, segundo plano ou nuvem> | sensível: <sim ou não>, <qual dado> | por que: <motivo>"
+        },
+        {
+          "rot": "onde-roda.txt · as instruções do projeto",
+          "icone": "arquivo",
+          "conteudo": "Para que serve: <o que este projeto entrega e para quem>\nOnde trabalha: <onde pode buscar e mexer, e onde não pode>\nComo confere: <como o Claude confere antes de dar uma tarefa como pronta>\nSe faltar algo: <o que fazer se faltar um dado ou um acesso>\nPrecisa do meu OK: <o que nunca acontece sem você aprovar>"
+        },
+        {
+          "rot": "Frases para coordenar o projeto",
+          "icone": "chat",
+          "conteudo": "Proponha as threads e espere meu OK antes de começar.\nNo máximo duas threads ao mesmo tempo.\nSó poste quando algo terminar ou travar.\nStatus de todas as threads.\nFaça esta tarefa com um modelo menor."
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "A decisão da Ana",
+            "html": "<ul><li><b>1 · Relatório semanal da padaria</b> (usa as vendas da semana): <b>local</b>. Dado sensível: a planilha fica no computador e o Claude lê só o que precisa.</li><li><b>2 · Posts da semana da clínica</b> (usa as skills de texto dela): <b>segundo plano</b>. As skills estão no computador e ela segue trabalhando.</li><li><b>3 · Preços dos concorrentes para a planilha da loja</b> (sites públicos): <b>nuvem</b>. Roda a tarde toda sem o notebook; a planilha da loja não sobe.</li></ul>"
+          },
+          {
+            "rot": "As instruções dela",
+            "html": "<ul><li><b>Para que serve:</b> pesquisar os preços públicos das lojas concorrentes e entregar uma tabela por peça.</li><li><b>Onde trabalha:</b> só sites públicos e a Library; a planilha da loja não entra.</li><li><b>Como confere:</b> cada preço cita o link da fonte e a data.</li><li><b>Se faltar algo:</b> pergunta e espera, sem inventar preço.</li><li><b>Precisa do meu OK:</b> arquivo novo na Library e qualquer envio para fora.</li></ul>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "conferidor",
+      "titulo": "Confira a sua decisão",
+      "sub": "Cole o seu onde-roda.txt (ou carregue o arquivo). A página confere cada trabalho numerado (lugar, \"sensível: sim\" ou \"sensível: não\" logo depois do lugar, e o motivo), recusa \"onde: nuvem | sensível: sim\" e confere as 5 linhas das instruções. É uma checagem de forma: se o lugar faz sentido, quem julga é você.",
+      "arquivo": "onde-roda.txt",
+      "rot": "Cole aqui a tabela (3 linhas numeradas) e as instruções do projeto (5 linhas):",
+      "modelo": "1 | ... | onde: ... | sensível: sim ou não, ... | por que: ...\n2 | ... | onde: ... | sensível: sim ou não, ... | por que: ...\n3 | ... | onde: ... | sensível: sim ou não, ... | por que: ...\nPara que serve: ...\nOnde trabalha: ...\nComo confere: ...\nSe faltar algo: ...\nPrecisa do meu OK: ...",
+      "regras": [
+        {
+          "tipo": "planos",
+          "min": 3,
+          "max": 3
+        },
+        {
+          "tipo": "cada_plano",
+          "grupos": [
+            {
+              "rot": "a coluna onde (local, segundo plano ou nuvem)",
+              "um_so": true,
+              "termos": [
+                "onde: local / onde: no meu computador / onde: no computador / where: local / where: locally / where: on my computer / donde: local / donde: en mi computadora / donde: en mi ordenador",
+                "onde: segundo plano / onde: em segundo plano / where: background / where: in the background / donde: segundo plano / donde: en segundo plano",
+                "onde: nuvem / onde: na nuvem / onde: projects / where: cloud / where: the cloud / where: in the cloud / where: projects / donde: nube / donde: la nube / donde: en la nube / donde: projects"
+              ]
+            },
+            {
+              "rot": "a coluna por que",
+              "min": 8,
+              "termos": [
+                "por que: / por quê: / porque: / why: / por qué:"
+              ]
+            },
+            {
+              "rot": "sensível: sim ou sensível: não",
+              "um_so": true,
+              "termos": [
+                "sensível: sim / sensitive: yes / sensible: sí",
+                "sensível: não / sensitive: no / sensible: no"
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "campos",
+          "campos": [
+            "Para que serve",
+            "Onde trabalha",
+            "Como confere",
+            "Se faltar algo",
+            "Precisa do meu OK"
+          ],
+          "min": 12
+        },
+        {
+          "tipo": "termos",
+          "grupos": [
+            {
+              "rot": "Dado sensível não vai para a nuvem (mude o onde para local ou segundo plano)",
+              "proibe": true,
+              "termos": [
+                "onde: nuvem | sensível: sim / onde: nuvem | sensível:  sim / onde: nuvem  | sensível: sim / onde: nuvem  | sensível:  sim / onde: nuvem |  sensível: sim / onde: nuvem |  sensível:  sim / onde: nuvem  |  sensível: sim / onde: nuvem  |  sensível:  sim / onde: nuvem |sensível: sim / onde: nuvem |sensível:  sim / onde: nuvem| sensível: sim / onde: nuvem| sensível:  sim / onde: nuvem|sensível: sim / onde: nuvem|sensível:  sim / onde: na nuvem | sensível: sim / onde: na nuvem | sensível:  sim / onde: na nuvem  | sensível: sim / onde: na nuvem  | sensível:  sim / onde: na nuvem |  sensível: sim / onde: na nuvem |  sensível:  sim / onde: na nuvem  |  sensível: sim / onde: na nuvem  |  sensível:  sim / onde: na nuvem |sensível: sim / onde: na nuvem |sensível:  sim / onde: na nuvem| sensível: sim / onde: na nuvem| sensível:  sim / onde: na nuvem|sensível: sim / onde: na nuvem|sensível:  sim / onde: nuvem (projects) | sensível: sim / onde: nuvem (projects) | sensível:  sim / onde: nuvem (projects)  | sensível: sim / onde: nuvem (projects)  | sensível:  sim / onde: nuvem (projects) |  sensível: sim / onde: nuvem (projects) |  sensível:  sim / onde: nuvem (projects)  |  sensível: sim / onde: nuvem (projects)  |  sensível:  sim / onde: nuvem (projects) |sensível: sim / onde: nuvem (projects) |sensível:  sim / onde: nuvem (projects)| sensível: sim / onde: nuvem (projects)| sensível:  sim / onde: nuvem (projects)|sensível: sim / onde: nuvem (projects)|sensível:  sim / onde: na nuvem (projects) | sensível: sim / onde: na nuvem (projects) | sensível:  sim / onde: na nuvem (projects)  | sensível: sim / onde: na nuvem (projects)  | sensível:  sim / onde: na nuvem (projects) |  sensível: sim / onde: na nuvem (projects) |  sensível:  sim / onde: na nuvem (projects)  |  sensível: sim / onde: na nuvem (projects)  |  sensível:  sim / onde: na nuvem (projects) |sensível: sim / onde: na nuvem (projects) |sensível:  sim / onde: na nuvem (projects)| sensível: sim / onde: na nuvem (projects)| sensível:  sim / onde: na nuvem (projects)|sensível: sim / onde: na nuvem (projects)|sensível:  sim / onde: projects | sensível: sim / onde: projects | sensível:  sim / onde: projects  | sensível: sim / onde: projects  | sensível:  sim / onde: projects |  sensível: sim / onde: projects |  sensível:  sim / onde: projects  |  sensível: sim / onde: projects  |  sensível:  sim / onde: projects |sensível: sim / onde: projects |sensível:  sim / onde: projects| sensível: sim / onde: projects| sensível:  sim / onde: projects|sensível: sim / onde: projects|sensível:  sim / onde:  nuvem | sensível: sim / onde:  nuvem | sensível:  sim / onde:  nuvem  | sensível: sim / onde:  nuvem  | sensível:  sim / onde:  nuvem |  sensível: sim / onde:  nuvem |  sensível:  sim / onde:  nuvem  |  sensível: sim / onde:  nuvem  |  sensível:  sim / onde:  nuvem |sensível: sim / onde:  nuvem |sensível:  sim / onde:  nuvem| sensível: sim / onde:  nuvem| sensível:  sim / onde:  nuvem|sensível: sim / onde:  nuvem|sensível:  sim / onde:  na nuvem | sensível: sim / onde:  na nuvem | sensível:  sim / onde:  na nuvem  | sensível: sim / onde:  na nuvem  | sensível:  sim / onde:  na nuvem |  sensível: sim / onde:  na nuvem |  sensível:  sim / onde:  na nuvem  |  sensível: sim / onde:  na nuvem  |  sensível:  sim / onde:  na nuvem |sensível: sim / onde:  na nuvem |sensível:  sim / onde:  na nuvem| sensível: sim / onde:  na nuvem| sensível:  sim / onde:  na nuvem|sensível: sim / onde:  na nuvem|sensível:  sim / onde:  nuvem (projects) | sensível: sim / onde:  nuvem (projects) | sensível:  sim / onde:  nuvem (projects)  | sensível: sim / onde:  nuvem (projects)  | sensível:  sim / onde:  nuvem (projects) |  sensível: sim / onde:  nuvem (projects) |  sensível:  sim / onde:  nuvem (projects)  |  sensível: sim / onde:  nuvem (projects)  |  sensível:  sim / onde:  nuvem (projects) |sensível: sim / onde:  nuvem (projects) |sensível:  sim / onde:  nuvem (projects)| sensível: sim / onde:  nuvem (projects)| sensível:  sim / onde:  nuvem (projects)|sensível: sim / onde:  nuvem (projects)|sensível:  sim / onde:  na nuvem (projects) | sensível: sim / onde:  na nuvem (projects) | sensível:  sim / onde:  na nuvem (projects)  | sensível: sim / onde:  na nuvem (projects)  | sensível:  sim / onde:  na nuvem (projects) |  sensível: sim / onde:  na nuvem (projects) |  sensível:  sim / onde:  na nuvem (projects)  |  sensível: sim / onde:  na nuvem (projects)  |  sensível:  sim / onde:  na nuvem (projects) |sensível: sim / onde:  na nuvem (projects) |sensível:  sim / onde:  na nuvem (projects)| sensível: sim / onde:  na nuvem (projects)| sensível:  sim / onde:  na nuvem (projects)|sensível: sim / onde:  na nuvem (projects)|sensível:  sim / onde:  projects | sensível: sim / onde:  projects | sensível:  sim / onde:  projects  | sensível: sim / onde:  projects  | sensível:  sim / onde:  projects |  sensível: sim / onde:  projects |  sensível:  sim / onde:  projects  |  sensível: sim / onde:  projects  |  sensível:  sim / onde:  projects |sensível: sim / onde:  projects |sensível:  sim / onde:  projects| sensível: sim / onde:  projects| sensível:  sim / onde:  projects|sensível: sim / onde:  projects|sensível:  sim / where: cloud | sensitive: yes / where: cloud | sensitive:  yes / where: cloud  | sensitive: yes / where: cloud  | sensitive:  yes / where: cloud |  sensitive: yes / where: cloud |  sensitive:  yes / where: cloud  |  sensitive: yes / where: cloud  |  sensitive:  yes / where: cloud |sensitive: yes / where: cloud |sensitive:  yes / where: cloud| sensitive: yes / where: cloud| sensitive:  yes / where: cloud|sensitive: yes / where: cloud|sensitive:  yes / where: the cloud | sensitive: yes / where: the cloud | sensitive:  yes / where: the cloud  | sensitive: yes / where: the cloud  | sensitive:  yes / where: the cloud |  sensitive: yes / where: the cloud |  sensitive:  yes / where: the cloud  |  sensitive: yes / where: the cloud  |  sensitive:  yes / where: the cloud |sensitive: yes / where: the cloud |sensitive:  yes / where: the cloud| sensitive: yes / where: the cloud| sensitive:  yes / where: the cloud|sensitive: yes / where: the cloud|sensitive:  yes / where: in the cloud | sensitive: yes / where: in the cloud | sensitive:  yes / where: in the cloud  | sensitive: yes / where: in the cloud  | sensitive:  yes / where: in the cloud |  sensitive: yes / where: in the cloud |  sensitive:  yes / where: in the cloud  |  sensitive: yes / where: in the cloud  |  sensitive:  yes / where: in the cloud |sensitive: yes / where: in the cloud |sensitive:  yes / where: in the cloud| sensitive: yes / where: in the cloud| sensitive:  yes / where: in the cloud|sensitive: yes / where: in the cloud|sensitive:  yes / where: cloud (projects) | sensitive: yes / where: cloud (projects) | sensitive:  yes / where: cloud (projects)  | sensitive: yes / where: cloud (projects)  | sensitive:  yes / where: cloud (projects) |  sensitive: yes / where: cloud (projects) |  sensitive:  yes / where: cloud (projects)  |  sensitive: yes / where: cloud (projects)  |  sensitive:  yes / where: cloud (projects) |sensitive: yes / where: cloud (projects) |sensitive:  yes / where: cloud (projects)| sensitive: yes / where: cloud (projects)| sensitive:  yes / where: cloud (projects)|sensitive: yes / where: cloud (projects)|sensitive:  yes / where: projects | sensitive: yes / where: projects | sensitive:  yes / where: projects  | sensitive: yes / where: projects  | sensitive:  yes / where: projects |  sensitive: yes / where: projects |  sensitive:  yes / where: projects  |  sensitive: yes / where: projects  |  sensitive:  yes / where: projects |sensitive: yes / where: projects |sensitive:  yes / where: projects| sensitive: yes / where: projects| sensitive:  yes / where: projects|sensitive: yes / where: projects|sensitive:  yes / where:  cloud | sensitive: yes / where:  cloud | sensitive:  yes / where:  cloud  | sensitive: yes / where:  cloud  | sensitive:  yes / where:  cloud |  sensitive: yes / where:  cloud |  sensitive:  yes / where:  cloud  |  sensitive: yes / where:  cloud  |  sensitive:  yes / where:  cloud |sensitive: yes / where:  cloud |sensitive:  yes / where:  cloud| sensitive: yes / where:  cloud| sensitive:  yes / where:  cloud|sensitive: yes / where:  cloud|sensitive:  yes / where:  the cloud | sensitive: yes / where:  the cloud | sensitive:  yes / where:  the cloud  | sensitive: yes / where:  the cloud  | sensitive:  yes / where:  the cloud |  sensitive: yes / where:  the cloud |  sensitive:  yes / where:  the cloud  |  sensitive: yes / where:  the cloud  |  sensitive:  yes / where:  the cloud |sensitive: yes / where:  the cloud |sensitive:  yes / where:  the cloud| sensitive: yes / where:  the cloud| sensitive:  yes / where:  the cloud|sensitive: yes / where:  the cloud|sensitive:  yes / where:  in the cloud | sensitive: yes / where:  in the cloud | sensitive:  yes / where:  in the cloud  | sensitive: yes / where:  in the cloud  | sensitive:  yes / where:  in the cloud |  sensitive: yes / where:  in the cloud |  sensitive:  yes / where:  in the cloud  |  sensitive: yes / where:  in the cloud  |  sensitive:  yes / where:  in the cloud |sensitive: yes / where:  in the cloud |sensitive:  yes / where:  in the cloud| sensitive: yes / where:  in the cloud| sensitive:  yes / where:  in the cloud|sensitive: yes / where:  in the cloud|sensitive:  yes / where:  cloud (projects) | sensitive: yes / where:  cloud (projects) | sensitive:  yes / where:  cloud (projects)  | sensitive: yes / where:  cloud (projects)  | sensitive:  yes / where:  cloud (projects) |  sensitive: yes / where:  cloud (projects) |  sensitive:  yes / where:  cloud (projects)  |  sensitive: yes / where:  cloud (projects)  |  sensitive:  yes / where:  cloud (projects) |sensitive: yes / where:  cloud (projects) |sensitive:  yes / where:  cloud (projects)| sensitive: yes / where:  cloud (projects)| sensitive:  yes / where:  cloud (projects)|sensitive: yes / where:  cloud (projects)|sensitive:  yes / where:  projects | sensitive: yes / where:  projects | sensitive:  yes / where:  projects  | sensitive: yes / where:  projects  | sensitive:  yes / where:  projects |  sensitive: yes / where:  projects |  sensitive:  yes / where:  projects  |  sensitive: yes / where:  projects  |  sensitive:  yes / where:  projects |sensitive: yes / where:  projects |sensitive:  yes / where:  projects| sensitive: yes / where:  projects| sensitive:  yes / where:  projects|sensitive: yes / where:  projects|sensitive:  yes / donde: nube | sensible: sí / donde: nube | sensible:  sí / donde: nube  | sensible: sí / donde: nube  | sensible:  sí / donde: nube |  sensible: sí / donde: nube |  sensible:  sí / donde: nube  |  sensible: sí / donde: nube  |  sensible:  sí / donde: nube |sensible: sí / donde: nube |sensible:  sí / donde: nube| sensible: sí / donde: nube| sensible:  sí / donde: nube|sensible: sí / donde: nube|sensible:  sí / donde: la nube | sensible: sí / donde: la nube | sensible:  sí / donde: la nube  | sensible: sí / donde: la nube  | sensible:  sí / donde: la nube |  sensible: sí / donde: la nube |  sensible:  sí / donde: la nube  |  sensible: sí / donde: la nube  |  sensible:  sí / donde: la nube |sensible: sí / donde: la nube |sensible:  sí / donde: la nube| sensible: sí / donde: la nube| sensible:  sí / donde: la nube|sensible: sí / donde: la nube|sensible:  sí / donde: en la nube | sensible: sí / donde: en la nube | sensible:  sí / donde: en la nube  | sensible: sí / donde: en la nube  | sensible:  sí / donde: en la nube |  sensible: sí / donde: en la nube |  sensible:  sí / donde: en la nube  |  sensible: sí / donde: en la nube  |  sensible:  sí / donde: en la nube |sensible: sí / donde: en la nube |sensible:  sí / donde: en la nube| sensible: sí / donde: en la nube| sensible:  sí / donde: en la nube|sensible: sí / donde: en la nube|sensible:  sí / donde: nube (projects) | sensible: sí / donde: nube (projects) | sensible:  sí / donde: nube (projects)  | sensible: sí / donde: nube (projects)  | sensible:  sí / donde: nube (projects) |  sensible: sí / donde: nube (projects) |  sensible:  sí / donde: nube (projects)  |  sensible: sí / donde: nube (projects)  |  sensible:  sí / donde: nube (projects) |sensible: sí / donde: nube (projects) |sensible:  sí / donde: nube (projects)| sensible: sí / donde: nube (projects)| sensible:  sí / donde: nube (projects)|sensible: sí / donde: nube (projects)|sensible:  sí / donde: projects | sensible: sí / donde: projects | sensible:  sí / donde: projects  | sensible: sí / donde: projects  | sensible:  sí / donde: projects |  sensible: sí / donde: projects |  sensible:  sí / donde: projects  |  sensible: sí / donde: projects  |  sensible:  sí / donde: projects |sensible: sí / donde: projects |sensible:  sí / donde: projects| sensible: sí / donde: projects| sensible:  sí / donde: projects|sensible: sí / donde: projects|sensible:  sí / donde:  nube | sensible: sí / donde:  nube | sensible:  sí / donde:  nube  | sensible: sí / donde:  nube  | sensible:  sí / donde:  nube |  sensible: sí / donde:  nube |  sensible:  sí / donde:  nube  |  sensible: sí / donde:  nube  |  sensible:  sí / donde:  nube |sensible: sí / donde:  nube |sensible:  sí / donde:  nube| sensible: sí / donde:  nube| sensible:  sí / donde:  nube|sensible: sí / donde:  nube|sensible:  sí / donde:  la nube | sensible: sí / donde:  la nube | sensible:  sí / donde:  la nube  | sensible: sí / donde:  la nube  | sensible:  sí / donde:  la nube |  sensible: sí / donde:  la nube |  sensible:  sí / donde:  la nube  |  sensible: sí / donde:  la nube  |  sensible:  sí / donde:  la nube |sensible: sí / donde:  la nube |sensible:  sí / donde:  la nube| sensible: sí / donde:  la nube| sensible:  sí / donde:  la nube|sensible: sí / donde:  la nube|sensible:  sí / donde:  en la nube | sensible: sí / donde:  en la nube | sensible:  sí / donde:  en la nube  | sensible: sí / donde:  en la nube  | sensible:  sí / donde:  en la nube |  sensible: sí / donde:  en la nube |  sensible:  sí / donde:  en la nube  |  sensible: sí / donde:  en la nube  |  sensible:  sí / donde:  en la nube |sensible: sí / donde:  en la nube |sensible:  sí / donde:  en la nube| sensible: sí / donde:  en la nube| sensible:  sí / donde:  en la nube|sensible: sí / donde:  en la nube|sensible:  sí / donde:  nube (projects) | sensible: sí / donde:  nube (projects) | sensible:  sí / donde:  nube (projects)  | sensible: sí / donde:  nube (projects)  | sensible:  sí / donde:  nube (projects) |  sensible: sí / donde:  nube (projects) |  sensible:  sí / donde:  nube (projects)  |  sensible: sí / donde:  nube (projects)  |  sensible:  sí / donde:  nube (projects) |sensible: sí / donde:  nube (projects) |sensible:  sí / donde:  nube (projects)| sensible: sí / donde:  nube (projects)| sensible:  sí / donde:  nube (projects)|sensible: sí / donde:  nube (projects)|sensible:  sí / donde:  projects | sensible: sí / donde:  projects | sensible:  sí / donde:  projects  | sensible: sí / donde:  projects  | sensible:  sí / donde:  projects |  sensible: sí / donde:  projects |  sensible:  sí / donde:  projects  |  sensible: sí / donde:  projects  |  sensible:  sí / donde:  projects |sensible: sí / donde:  projects |sensible:  sí / donde:  projects| sensible: sí / donde:  projects| sensible:  sí / donde:  projects|sensible: sí / donde:  projects|sensible:  sí"
+              ]
+            }
+          ]
+        }
+      ],
+      "ok": "OK: {n} trabalhos com lugar, motivo e dado sensível, e as 5 instruções do projeto",
+      "exemplo": "1 | Relatório semanal da padaria com as vendas da semana | onde: local | sensível: sim, faturamento da padaria | por que: as vendas ficam no meu computador e o Claude lê só o resumo\n2 | Posts da semana da clínica | onde: segundo plano | sensível: não, os posts serão públicos | por que: usa as skills de texto do meu computador e eu sigo trabalhando\n3 | Preços dos concorrentes para a planilha de preços da loja de roupas | onde: nuvem | sensível: não, só preços públicos | por que: pode rodar a tarde toda sem o notebook ligado\nPara que serve: pesquisar os preços públicos das lojas concorrentes e entregar uma tabela por peça.\nOnde trabalha: só em sites públicos e na Library do projeto, nunca na planilha de preços da loja.\nComo confere: cada preço cita o link da fonte e a data em que foi visto.\nSe faltar algo: pergunta no projeto e espera, sem inventar preço.\nPrecisa do meu OK: qualquer arquivo novo na Library e qualquer coisa enviada para fora.",
+      "exemplo_errado": "1 | Relatório semanal da padaria com as vendas da semana | onde: nuvem | sensível: sim, faturamento da padaria | por que: é mais rápido e roda sem o notebook\n2 | Posts da semana da clínica | onde: segundo plano | sensível: não, os posts serão públicos | por que: usa as skills de texto do meu computador\n3 | Preços dos concorrentes para a planilha de preços da loja de roupas | onde: nuvem | sensível: não, só preços públicos | por que: pode rodar a tarde toda sem o notebook ligado\nPara que serve: pesquisar os preços públicos das lojas concorrentes e entregar uma tabela por peça.\nOnde trabalha: só em sites públicos e na Library do projeto, nunca na planilha de preços da loja.\nComo confere: cada preço cita o link da fonte e a data em que foi visto.\nSe faltar algo: pergunta no projeto e espera, sem inventar preço.\nPrecisa do meu OK: qualquer arquivo novo na Library e qualquer coisa enviada para fora."
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Prática: onde roda cada trabalho seu",
+      "sub": "Use os 3 trabalhos do inventário da aula 1, ou escolha 3 trabalhos desta semana.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "E1 · A tabela de decisão",
+          "min": "15 min",
+          "texto": "Copie a tabela do modelo e preencha uma linha por trabalho: onde roda, se tem dado sensível e por quê. Regra do curso: dado sensível não vai para um projeto na nuvem, e no local só entra na conversa o que você decidir.",
+          "pronto": "cada linha tem um lugar só, e toda linha com \"sensível: sim\" está em local ou segundo plano (o conferidor recusa a nuvem com \"sensível: sim\")."
+        },
+        {
+          "id": "e2",
+          "titulo": "E2 · As instruções do projeto",
+          "min": "15 min",
+          "texto": "Escolha o trabalho que foi para a nuvem (se nenhum foi, escolha o que mais iria) e escreva as 5 linhas das instruções do projeto. Junte com a tabela no onde-roda.txt e cole no conferidor acima.",
+          "pronto": "o conferidor responde \"OK: 3 trabalhos com lugar, motivo e dado sensível, e as 5 instruções do projeto\"."
+        },
+        {
+          "id": "e3",
+          "titulo": "E3 · Na nuvem, se você já tem acesso",
+          "min": "10 min",
+          "texto": "Procure os Projects na barra lateral do claude.ai/code ou na aba Code do app Desktop. Se aparecer, crie um projeto, cole as instruções e escreva: \"Proponha as threads e espere meu OK antes de começar.\" Se não aparecer, entre na lista de espera e guarde o onde-roda.txt.",
+          "pronto": "com acesso: o Claude propôs as threads e nenhuma começou antes do seu OK. Sem acesso: você conferiu a barra lateral e o onde-roda.txt está salvo para quando o recurso chegar."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Teste o que aprendeu",
+      "sub": "A explicação aparece depois da sua resposta.",
+      "perguntas": [
+        {
+          "p": "Você desliga o notebook e vai embora. Qual trabalho continua andando?",
+          "opcoes": [
+            "A sessão local que estava aberta no terminal.",
+            "A sessão em segundo plano criada com claude --bg.",
+            "A thread de um projeto rodando na nuvem.",
+            "Nenhum: todo trabalho do Claude para junto com a máquina."
+          ],
+          "certa": 2,
+          "explica": "A thread na nuvem não depende do seu computador. O erro comum é achar que o segundo plano sobrevive à máquina desligada: o supervisor deixa você fechar o terminal, mas o computador precisa continuar ligado.",
+          "ref": "diagrama"
+        },
+        {
+          "p": "A Ana vai fazer o relatório semanal da padaria com as vendas da semana. Pela regra do curso, onde isso roda?",
+          "opcoes": [
+            "Na nuvem, porque lá o relatório roda sem o computador.",
+            "No computador dela: local ou em segundo plano.",
+            "Em qualquer lugar, já que o Claude é o mesmo.",
+            "Na nuvem, desde que o projeto tenha memória ligada."
+          ],
+          "certa": 1,
+          "explica": "As vendas da padaria são dado sensível. No local, a planilha fica no computador e só o que o Claude lê vai para o modelo; num projeto, ela ficaria guardada na nuvem. O erro comum é achar que no local nada sai: o que o Claude lê vai para o modelo, então decida também o que ele lê.",
+          "ref": "codigo"
+        },
+        {
+          "p": "O que você escreve nas instruções do projeto?",
+          "opcoes": [
+            "A lista de todas as conversas antigas do chat.",
+            "As senhas e os acessos de que o Claude vai precisar.",
+            "Só o nome da padaria e a data de entrega.",
+            "Para que serve, onde trabalhar, como conferir, o que fazer se faltar algo e o que precisa do seu OK."
+          ],
+          "certa": 3,
+          "explica": "As instruções são o brief que toda thread nova recebe. O erro comum é tratar o projeto como cofre de senhas: senha não entra em instrução nenhuma, e muito menos na nuvem.",
+          "ref": "conferidor"
+        },
+        {
+          "p": "Você abre a barra lateral e não encontra os Projects. O que isso quer dizer?",
+          "opcoes": [
+            "A beta libera aos poucos: entre na lista de espera.",
+            "Sua conta foi bloqueada por excesso de uso no mês.",
+            "Você precisa instalar um mod antes de usar.",
+            "O recurso só existe no plano Enterprise, das empresas grandes."
+          ],
+          "certa": 0,
+          "explica": "Os Projects estão em beta pública nos planos Pro e Max, liberando aos poucos, e ainda não chegaram ao Team e ao Enterprise. O erro comum é achar que algo está quebrado.",
+          "ref": "passos"
+        },
+        {
+          "p": "Uma thread do projeto precisa de um arquivo que você não quer guardar na nuvem. O que fazer?",
+          "opcoes": [
+            "Subir a pasta inteira para a Library do projeto sem olhar o que tem dentro.",
+            "Desistir: thread de projeto só roda na nuvem, sem exceção.",
+            "Pedir que ela rode no seu computador (Work locally), ligado e acordado.",
+            "Trocar o modelo da thread por um menor, que lê arquivos locais."
+          ],
+          "certa": 2,
+          "explica": "Com o Work locally (Remote Control) a thread roda na sua máquina, com o computador ligado e acordado, e o arquivo não fica guardado na Library. Cuidado: o que ela lê vai para o modelo e o que ela escreve volta para o projeto, então não peça para copiar o conteúdo sensível.",
+          "ref": "passos"
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "A aula em três frases",
+      "itens": [
+        {
+          "t": "Três lugares",
+          "texto": "Local e segundo plano guardam os arquivos no seu computador e pedem a máquina ligada; a nuvem guarda os arquivos lá e roda sem ela."
+        },
+        {
+          "t": "O que entra",
+          "texto": "Em qualquer lugar, o que o Claude lê vai para o modelo: decida antes o que nunca entra numa sessão."
+        },
+        {
+          "t": "As instruções",
+          "texto": "Para que serve, onde trabalha, como confere, o que fazer se faltar algo e o que precisa do seu OK."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para ir além",
+      "links": [
+        {
+          "t": "Projects no Claude Code (documentação oficial, em inglês)",
+          "href": "https://code.claude.com/docs/en/claude-projects",
+          "icone": "nuvem"
+        },
+        {
+          "t": "Remote Control: rodar no seu computador (em inglês)",
+          "href": "https://code.claude.com/docs/en/remote-control",
+          "icone": "terminal"
+        },
+        {
+          "t": "Agent view e sessões em segundo plano (em inglês)",
+          "href": "https://code.claude.com/docs/en/agent-view",
+          "icone": "lista"
+        }
+      ]
+    }
+  ]
+}
