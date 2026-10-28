@@ -9,7 +9,7 @@ Campos de texto aceitam <b>, <code>, <a> e <br>; o resto é escapado na origem (
 """
 import argparse, html, json, pathlib, re, sys
 
-VERSAO = "7.14.22"    # versão do motor (CHANGELOG.md da skill formato-curso-v72)
+VERSAO = "7.14.23"    # versão do motor (CHANGELOG.md da skill formato-curso-v72)
 RAIZ = pathlib.Path(__file__).resolve().parent
 PREFIXO = "../../"  # caminho até a raiz a partir da página em geração (v7.2: foto do "Você" no diagrama)
 FOTO_VOCE = "assets/img/voce.jpg"
@@ -595,6 +595,7 @@ def pagina_aula(curso, aulas, a, idx, ui, lang):
         if x["tipo"] == "links": continue
         k += 1
         refs.setdefault(x["tipo"], (f"s{k}", re.sub("<[^>]+>", "", x["titulo"])))
+        refs[f"s{k}"] = (f"s{k}", re.sub("<[^>]+>", "", x["titulo"]))  # ref "sN" = N-ª seção (sem contar links)
     num = 0
     pt_terms = [x for x in PT_AULAS.get(a["slug"], a)["secoes"] if x["tipo"] == "simterm"]  # 7.14.19
     n_term = 0
